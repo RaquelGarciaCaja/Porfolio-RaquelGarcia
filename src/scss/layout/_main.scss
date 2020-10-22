@@ -55,4 +55,34 @@
       width: 30px;
     }
   }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__list-movie {
+    max-width: 200px;
+    max-height: 200px;
+    border: 2px solid black;
+    font-size: 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color: aquamarine;
+    overflow: hidden;
+    opacity: 0.5;
+  }
+
+  .box:hover {
+    opacity: 1;
+  }
+
+  &__list--img {
+    background-image: cover;
+    &--name,
+    &--genre {
+      font-family: $font-title;
+      font-size: 15px;
+    }
+  }
 }
