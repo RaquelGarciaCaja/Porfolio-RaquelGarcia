@@ -1,14 +1,17 @@
-.header{
-  background-color:$color-header;
+.header {
+  background-color: $color-header;
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
   padding: 10px;
 
   &__title {
-  font-family: $font-main;
+    font-family: $font-main;
   }
 
-  &__icon{
+  &__icon {
     font-size: 50px;
     padding-right: 5px;
   }
