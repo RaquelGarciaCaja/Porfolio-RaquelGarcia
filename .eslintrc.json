@@ -12,7 +12,7 @@
     "extends": "eslint:recommended",
     "rules": {
         "indent": [2, 2],
-        "quotes": [2, "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+        "quotes": [2, "double", { "avoidEscape": true, "allowTemplateLiterals": true }],
         "semi": [2, "always"],
         "eqeqeq": 2,
         "strict": [2, "global"],

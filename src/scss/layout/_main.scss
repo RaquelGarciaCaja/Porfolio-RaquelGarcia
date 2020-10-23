@@ -64,12 +64,6 @@
   }
   &__list-movie {
     border: 2px solid black;
-    width: 200px;
-    height: 200px;
-    font-size: 20px;
-    padding: 20px;
-    margin: 20px;
-    overflow: hidden;
     opacity: 0.5;
 
     &:hover {
@@ -92,4 +86,15 @@
   &__aside {
     display: none;
   }
+}
+
+.style__fav {
+  background-color: yellow;
+
+  &__item {
+  }
+}
+
+.hidden {
+  display: none;
 }
