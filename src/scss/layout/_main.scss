@@ -1,5 +1,6 @@
 .main {
   margin-top: 100px;
+  display: flex;
   // background: rgba(242, 246, 248, 1);
   // background: -moz-linear-gradient(
   //   left,
@@ -45,6 +46,10 @@
   //   rgba(224, 239, 249, 1) 100%
   // );
   // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=1);
+
+  &-form {
+    width: 80%;
+  }
   &__form--text {
     font-family: $font-secondary;
     font-size: 20px;
@@ -77,19 +82,21 @@
 
       &--name,
       &--genre {
-        font-family: $font-title;
+        font-family: $font-secondary;
         font-size: 15px;
       }
     }
   }
 
   &__aside {
-    display: none;
+    border: 2px dotted black;
+    width: 20%;
+    margin: 10px;
   }
 }
 
 .style__fav {
-  background-color: yellow;
+  background-color: #af7ac5;
 
   &__item {
   }
