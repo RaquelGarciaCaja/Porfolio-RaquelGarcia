@@ -32,8 +32,8 @@ function paintMovies() {
   for (let i = 0; i < movies.length; i++) {
     let classFav;
     const favoriteIndex = arrFavoriteList.indexOf(i);
-    //console.log(arrFavoriteList.indexOf(i));
-    const favorite = favoriteIndex !== -1;
+    //console.log(arrFavoriteList);
+    const favorite = favoriteIndex == -1;
     if (favorite === true) {
       classFav = "style__fav";
     } else {
@@ -63,26 +63,30 @@ function handleFilter() {
 
 function favMovies(ev) {
   const clickId = parseInt(ev.currentTarget.id);
+  //  console.log(clickId);
   // const isFavorite = arrFavoriteList.find( click =>{ click;})
   const indexFav = arrFavoriteList.indexOf(clickId);
-  console.log(arrFavoriteList);
+  //console.log(indexFav);
   const isFavorite = indexFav !== -1;
   if (isFavorite === false) {
     arrFavoriteList.push(clickId);
     //console.log("entra");
   } else {
     arrFavoriteList.splice(isFavorite, 1);
-    // console.log("sale");
+    //console.log("sale");
   }
   paintMovies();
   listenFavMovies();
   paintFavorite();
+  setLocalStorage();
 }
 
 function paintFavorite() {
   const listMoviesFav = document.querySelector(".main__aside-fav");
   let htmlFav = "";
   for (let i = 0; i < arrFavoriteList.length; i++) {
+    console.log(movies[i]);
+
     console.log(arrFavoriteList);
 
     htmlFav += `<li class = "main__list-movie" id="${movies[i].show.id}">`;
@@ -99,6 +103,19 @@ function paintFavorite() {
   }
   listMoviesFav.innerHTML = htmlFav;
 }
+
+//GUARDAR EN EL LOCAL STORAGE
+function setLocalStorage() {
+  localStorage.setItem("LocalStorageList", JSON.stringify(arrFavoriteList));
+}
+//OBTENER EL LOCAL STORAGE
+function getLocalStorage() {
+  arrFavoriteList = JSON.parse(localStorage.getItem("LocalStorageList"));
+  if (arrFavoriteList === null) {
+    arrFavoriteList = [];
+  }
+}
+getLocalStorage();
 
 //listeners
 // llamando a buscar
