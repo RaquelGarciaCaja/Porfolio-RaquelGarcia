@@ -34,7 +34,7 @@ function paintMovies() {
     const favoriteIndex = arrFavoriteList.indexOf(i);
     //console.log(arrFavoriteList);
     const favorite = favoriteIndex == -1;
-    if (favorite === true) {
+    if (favorite === false) {
       classFav = "style__fav";
     } else {
       classFav = "";
@@ -68,6 +68,7 @@ function favMovies(ev) {
   const indexFav = arrFavoriteList.indexOf(clickId);
   //console.log(indexFav);
   const isFavorite = indexFav !== -1;
+  console.log(isFavorite);
   if (isFavorite === false) {
     arrFavoriteList.push(clickId);
     console.log("entra");

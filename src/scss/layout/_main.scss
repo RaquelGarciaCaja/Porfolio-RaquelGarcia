@@ -148,11 +148,20 @@
       flex-wrap: wrap;
       padding: 20px;
     }
+    &--start {
+      padding: 5px;
+    }
+    &--title {
+      padding: 2px;
+    }
+  }
+  &__aside-box {
+    display: flex;
   }
 }
 
 .style__fav {
-  // background-color: #af7ac5;
+  border: 2px solid red;
 
   &__item {
   }
