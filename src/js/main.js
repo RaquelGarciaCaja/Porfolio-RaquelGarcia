@@ -2,7 +2,7 @@
 const input = document.querySelector(".js-input");
 const btn = document.querySelector(".js-button");
 const listMovies = document.querySelector(".main__list");
-const url = "http://api.tvmaze.com/search/shows?q=tronos";
+const url = "http://api.tvmaze.com/search/shows?q=";
 const imgPlaceholder = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV";
 
 const aside = document.querySelector(".main__aside");
@@ -31,9 +31,11 @@ function paintMovies() {
   let html = "";
   for (let i = 0; i < movies.length; i++) {
     let classFav;
-    const favoriteIndex = arrFavoriteList.indexOf(i);
+    const classIndex = arrFavoriteList.finIndex((click) => {
+      if (parseInt(click.show.id) === clickId) return click;
+    });
     //console.log(arrFavoriteList);
-    const favorite = favoriteIndex == -1;
+    const favorite = classIndex == -1;
     if (favorite === false) {
       classFav = "style__fav";
     } else {
@@ -63,17 +65,20 @@ function handleFilter() {
 
 function favMovies(ev) {
   const clickId = parseInt(ev.currentTarget.id);
-  //  console.log(clickId);
-  // const isFavorite = arrFavoriteList.find( click =>{ click;})
-  const indexFav = arrFavoriteList.indexOf(clickId);
-  //console.log(indexFav);
-  const isFavorite = indexFav !== -1;
-  console.log(isFavorite);
-  if (isFavorite === false) {
-    arrFavoriteList.push(clickId);
+
+  const indexFav = arrFavoriteList.findIndex((click) => {
+    if (parseInt(click.show.id) === clickId) return click;
+  });
+  if (indexFav === -1) {
+    const foundIsFavorite = movies.find((click) => {
+      if (parseInt(click.show.id) === clickId) {
+        return click;
+      }
+    });
+    arrFavoriteList.push(foundIsFavorite);
     console.log("entra");
   } else {
-    arrFavoriteList.splice(isFavorite, 1);
+    arrFavoriteList.splice(indexFav, 1);
     console.log("sale");
   }
   paintMovies();
@@ -86,19 +91,19 @@ function paintFavorite() {
   const listMoviesFav = document.querySelector(".main__aside--fav");
   let htmlFav = "";
   for (let i = 0; i < arrFavoriteList.length; i++) {
-    console.log(movies[i]);
+    // console.log(movies[i]);
 
-    console.log(arrFavoriteList);
+    // console.log(arrFavoriteList);
 
-    htmlFav += `<li class = "main__container--fav" id="${movies[i].show.id}">`;
+    htmlFav += `<li class = "main__container--fav" id="${arrFavoriteList[i].show.id}">`;
 
-    if (movies[i].show.image !== null) {
-      htmlFav += `<img class = "main__img--fav" src="${movies[i].show.image.medium}" alt="${movies[i].show.name}" />`;
+    if (arrFavoriteList[i].show.image !== null) {
+      htmlFav += `<img class = "main__img--fav" src="${arrFavoriteList[i].show.image.medium}" alt="${arrFavoriteList[i].show.name}" />`;
     } else {
-      htmlFav += `<img class = "main__img--fav" src="${imgPlaceholder}" alt="${movies[i].show.name}" />`;
+      htmlFav += `<img class = "main__img--fav" src="${imgPlaceholder}" alt="${arrFavoriteList[i].show.name}" />`;
     }
 
-    htmlFav += `<h3 class = "main__name--fav">Nombre: ${movies[i].show.name}</h3>`;
+    htmlFav += `<h3 class = "main__name--fav">Nombre: ${arrFavoriteList[i].show.name}</h3>`;
     htmlFav += "</li>";
   }
   listMoviesFav.innerHTML = htmlFav;
