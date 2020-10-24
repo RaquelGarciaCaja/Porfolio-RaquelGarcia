@@ -40,16 +40,16 @@ function paintMovies() {
       classFav = "";
     }
     const showimage = movies[i].show.image;
-    html += `<li class = "main__list-movie ${classFav}" id="${movies[i].show.id}">`;
+    html += `<li class = "main__container ${classFav}" id="${movies[i].show.id}">`;
 
     if (showimage !== null) {
-      html += `<img class = "main__list--img" src="${movies[i].show.image.medium}" alt="${movies[i].show.name}" />`;
+      html += `<img class = "main__img" src="${movies[i].show.image.medium}" alt="${movies[i].show.name}" />`;
     } else {
-      html += `<img class = "main__list--img" src="${imgPlaceholder}" alt="${movies[i].show.name}" />`;
+      html += `<img class = "main__img" src="${imgPlaceholder}" alt="${movies[i].show.name}" />`;
     }
 
-    html += `<h3 class = "main__list--name">Nombre: ${movies[i].show.name}</h3>`;
-    html += `<p class = "main__list--genres" > Genero: ${movies[i].show.genres}</p>`;
+    html += `<h3 class = "main__name">Nombre: ${movies[i].show.name}</h3>`;
+    // html += `<p class = "main__genres" > Genero: ${movies[i].show.genres}</p>`;
     html += "</li>";
   }
 
@@ -70,10 +70,10 @@ function favMovies(ev) {
   const isFavorite = indexFav !== -1;
   if (isFavorite === false) {
     arrFavoriteList.push(clickId);
-    //console.log("entra");
+    console.log("entra");
   } else {
     arrFavoriteList.splice(isFavorite, 1);
-    //console.log("sale");
+    console.log("sale");
   }
   paintMovies();
   listenFavMovies();
@@ -82,23 +82,22 @@ function favMovies(ev) {
 }
 
 function paintFavorite() {
-  const listMoviesFav = document.querySelector(".main__aside-fav");
+  const listMoviesFav = document.querySelector(".main__aside--fav");
   let htmlFav = "";
   for (let i = 0; i < arrFavoriteList.length; i++) {
     console.log(movies[i]);
 
     console.log(arrFavoriteList);
 
-    htmlFav += `<li class = "main__list-movie" id="${movies[i].show.id}">`;
+    htmlFav += `<li class = "main__container--fav" id="${movies[i].show.id}">`;
 
     if (movies[i].show.image !== null) {
-      htmlFav += `<img class = "main__list--img" src="${movies[i].show.image.medium}" alt="${movies[i].show.name}" />`;
+      htmlFav += `<img class = "main__img--fav" src="${movies[i].show.image.medium}" alt="${movies[i].show.name}" />`;
     } else {
-      htmlFav += `<img class = "main__list--img" src="${imgPlaceholder}" alt="${movies[i].show.name}" />`;
+      htmlFav += `<img class = "main__img--fav" src="${imgPlaceholder}" alt="${movies[i].show.name}" />`;
     }
 
-    htmlFav += `<h3 class = "main__list--name">Nombre: ${movies[i].show.name}</h3>`;
-    htmlFav += `<p class = "main__list--genres" > Genero: ${movies[i].show.genres}</p>`;
+    htmlFav += `<h3 class = "main__name--fav">Nombre: ${movies[i].show.name}</h3>`;
     htmlFav += "</li>";
   }
   listMoviesFav.innerHTML = htmlFav;
@@ -124,7 +123,7 @@ btn.addEventListener("click", handleFilter);
 // llamando a los li para poner en fav
 
 function listenFavMovies() {
-  const clickFavMovies = document.querySelectorAll(".main__list-movie");
+  const clickFavMovies = document.querySelectorAll(".main__container");
   for (const clickFavMovie of clickFavMovies) {
     clickFavMovie.addEventListener("click", favMovies);
   }
