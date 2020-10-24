@@ -4,8 +4,7 @@ const btn = document.querySelector(".js-button");
 const listMovies = document.querySelector(".main__list");
 const url = "http://api.tvmaze.com/search/shows?q=";
 const imgPlaceholder = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV";
-
-const aside = document.querySelector(".main__aside");
+const reset = document.querySelector(".js-reset");
 
 //ev.preventDefault()
 // arrays datos y favoritos
@@ -20,6 +19,7 @@ function getData() {
     })
     .then((data) => {
       movies = data;
+
       paintMovies();
       listenFavMovies();
       paintFavorite();
@@ -30,19 +30,28 @@ function getData() {
 function paintMovies() {
   let html = "";
   for (let i = 0; i < movies.length; i++) {
+    // let classFav;
+    // const classIndex = arrFavoriteList.finIndex((click) => {
+    //   if (parseInt(click.show.id) === clickId) return click;
+
+    //   //console.log(arrFavoriteList);
+    //   if (classIndex === false) {
+    //     classFav = "style__fav";
+    //   } else {
+    //     classFav = "";
+    //   }
+    // });
     let classFav;
-    const classIndex = arrFavoriteList.finIndex((click) => {
-      if (parseInt(click.show.id) === clickId) return click;
+    const classIndex = movies.find((click) => {
+      if (parseInt(click.show.id) === movies[i].show.id) return click;
     });
-    //console.log(arrFavoriteList);
-    const favorite = classIndex == -1;
-    if (favorite === false) {
+    if (classIndex === false) {
       classFav = "style__fav";
     } else {
       classFav = "";
     }
     const showimage = movies[i].show.image;
-    html += `<li class = "main__container ${classFav}" id="${movies[i].show.id}">`;
+    html += `<li class = "main__container  ${classFav} " id="${movies[i].show.id}">`;
 
     if (showimage !== null) {
       html += `<img class = "main__img" src="${movies[i].show.image.medium}" alt="${movies[i].show.name}" />`;
@@ -50,7 +59,7 @@ function paintMovies() {
       html += `<img class = "main__img" src="${imgPlaceholder}" alt="${movies[i].show.name}" />`;
     }
 
-    html += `<h3 class = "main__name">Nombre: ${movies[i].show.name}</h3>`;
+    html += `<h3 class = "main__name">${movies[i].show.name}</h3>`;
     // html += `<p class = "main__genres" > Genero: ${movies[i].show.genres}</p>`;
     html += "</li>";
   }
@@ -76,10 +85,8 @@ function favMovies(ev) {
       }
     });
     arrFavoriteList.push(foundIsFavorite);
-    console.log("entra");
   } else {
     arrFavoriteList.splice(indexFav, 1);
-    console.log("sale");
   }
   paintMovies();
   listenFavMovies();
@@ -103,7 +110,7 @@ function paintFavorite() {
       htmlFav += `<img class = "main__img--fav" src="${imgPlaceholder}" alt="${arrFavoriteList[i].show.name}" />`;
     }
 
-    htmlFav += `<h3 class = "main__name--fav">Nombre: ${arrFavoriteList[i].show.name}</h3>`;
+    htmlFav += `<h3 class = "main__name--fav">${arrFavoriteList[i].show.name}</h3>`;
     htmlFav += "</li>";
   }
   listMoviesFav.innerHTML = htmlFav;
@@ -121,6 +128,16 @@ function getLocalStorage() {
   }
 }
 getLocalStorage();
+
+//reset all
+
+// function resetData() {
+//   arrFavoriteList.length = 0;
+//   console.log((arrFavoriteList.length = []));
+// }
+
+// console.log(resetData);
+// reset.addEventListener("click", resetData);
 
 //listeners
 // llamando a buscar
