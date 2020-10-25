@@ -11,7 +11,7 @@ const reset = document.querySelector(".js-reset");
 let movies = [];
 let arrFavoriteList = [];
 
-//api
+//API
 function getData() {
   fetch(url + input.value)
     .then((response) => {
@@ -26,7 +26,7 @@ function getData() {
     });
 }
 
-//paint
+//PAINT API
 function paintMovies() {
   let html = "";
   for (let i = 0; i < movies.length; i++) {
@@ -67,11 +67,12 @@ function paintMovies() {
   listMovies.innerHTML = html;
 }
 
-// funcion manejadora de paint
+// HANDLER PAINT
 function handleFilter() {
   getData();
 }
 
+//PUSH AND SPLICES FAVORITES INTO ARRFAVORITELIST
 function favMovies(ev) {
   const clickId = parseInt(ev.currentTarget.id);
 
@@ -94,6 +95,7 @@ function favMovies(ev) {
   setLocalStorage();
 }
 
+// PAINT FAVORITES
 function paintFavorite() {
   const listMoviesFav = document.querySelector(".main__aside--fav");
   let htmlFav = "";
@@ -126,24 +128,21 @@ function getLocalStorage() {
   if (arrFavoriteList === null) {
     arrFavoriteList = [];
   }
+  paintMovies();
+  paintFavorite();
 }
 getLocalStorage();
 
-//reset all
+//RESET ALL (PAINT FAVORITES AND LOCALSTORAGE)
+function resetFavorites() {
+  arrFavoriteList.splice(1, arrFavoriteList.length);
+  arrFavoriteList = [];
+  localStorage.clear();
+  paintFavorite();
+}
 
-// function resetData() {
-//   arrFavoriteList.length = 0;
-//   console.log((arrFavoriteList.length = []));
-// }
-
-// console.log(resetData);
-// reset.addEventListener("click", resetData);
-
-//listeners
-// llamando a buscar
+//LISTENERS
 btn.addEventListener("click", handleFilter);
-
-// llamando a los li para poner en fav
 
 function listenFavMovies() {
   const clickFavMovies = document.querySelectorAll(".main__container");
@@ -151,3 +150,5 @@ function listenFavMovies() {
     clickFavMovie.addEventListener("click", favMovies);
   }
 }
+
+reset.addEventListener("click", resetFavorites);
