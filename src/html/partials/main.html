@@ -1,23 +1,26 @@
 <main class="main">
-  <div class="main-form">
-    <form action="" class="main__form">
-      <label for="" class="main__form--text">Encuentra tu serie/película: </label>
-      <input type="text" class="main__form--input js-input" placeholder=" Ej: friends" />
-      <input type="button" value="Buscar" class="js-button" />
-    </form>
-    <ul class="main__list">
-      <!-- aqui van las pelis/series -->
-    </ul>
-  </div>
-
-  <div class="main__aside">
-    <div class="main__aside-box">
-      <i class="far fa-star main__aside--start"></i>
-      <h3 class="main__aside--title">Favoritos</h3>
+  <form action="" class="main__form">
+    <label for="" class="main__form--text">Encuentra tu serie/película: </label>
+    <input type="text" class="main__form--input js-input" placeholder=" Ej: friends" />
+    <input type="button" value="Buscar" class="js-button" />
+  </form>
+  <section class="main-form">
+    <div class="main-form__list">
+      <ul class="main__list">
+        <!-- aqui van las pelis/series -->
+      </ul>
     </div>
-    <div><input class="js-reset" value="Borrar" type="button" /></div>
-    <ul class="main__aside--fav">
-      <!-- aqui van los favoritos -->
-    </ul>
-  </div>
+
+    <div class="main__aside">
+      <div class="main__aside-box">
+        <i class="far fa-star main__aside--start"></i>
+        <h3 class="main__aside--title">Favoritos</h3>
+      </div>
+
+      <div><input class="reset js-reset" value="Borrar" type="button" /></div>
+      <ul class="main__aside--fav">
+        <!-- aqui van los favoritos -->
+      </ul>
+    </div>
+  </section>
 </main>

@@ -30,28 +30,23 @@ function getData() {
 function paintMovies() {
   let html = "";
   for (let i = 0; i < movies.length; i++) {
-    // let classFav;
-    // const classIndex = arrFavoriteList.finIndex((click) => {
-    //   if (parseInt(click.show.id) === clickId) return click;
-
-    //   //console.log(arrFavoriteList);
-    //   if (classIndex === false) {
-    //     classFav = "style__fav";
-    //   } else {
-    //     classFav = "";
-    //   }
-    // });
     let classFav;
     const classIndex = movies.find((click) => {
-      if (parseInt(click.show.id) === movies[i].show.id) return click;
+      for (let i = 0; i < click.length; i++) {
+        console.log(click[i]);
+        if (parseInt(click[i].show.id) === movies[i].show.id) return click;
+        console.log(click[i]);
+      }
     });
+
     if (classIndex === false) {
       classFav = "style__fav";
     } else {
       classFav = "";
     }
+
     const showimage = movies[i].show.image;
-    html += `<li class = "main__container  ${classFav} " id="${movies[i].show.id}">`;
+    html += `<li class = "main__container ${classFav}" id="${movies[i].show.id}">`;
 
     if (showimage !== null) {
       html += `<img class = "main__img" src="${movies[i].show.image.medium}" alt="${movies[i].show.name}" />`;
@@ -74,8 +69,8 @@ function handleFilter() {
 
 //PUSH AND SPLICES FAVORITES INTO ARRFAVORITELIST
 function favMovies(ev) {
-  const clickId = parseInt(ev.currentTarget.id);
-
+  const movieCLick = ev.currentTarget;
+  const clickId = parseInt(movieCLick.id);
   const indexFav = arrFavoriteList.findIndex((click) => {
     if (parseInt(click.show.id) === clickId) return click;
   });
@@ -86,9 +81,13 @@ function favMovies(ev) {
       }
     });
     arrFavoriteList.push(foundIsFavorite);
+    movieCLick.classList.add("style__fav");
+    //movieCLick.classList.remove("style__fav");
   } else {
     arrFavoriteList.splice(indexFav, 1);
+    // movieCLick.classList.remove("style__fav");
   }
+
   paintMovies();
   listenFavMovies();
   paintFavorite();
@@ -100,10 +99,6 @@ function paintFavorite() {
   const listMoviesFav = document.querySelector(".main__aside--fav");
   let htmlFav = "";
   for (let i = 0; i < arrFavoriteList.length; i++) {
-    // console.log(movies[i]);
-
-    // console.log(arrFavoriteList);
-
     htmlFav += `<li class = "main__container--fav" id="${arrFavoriteList[i].show.id}">`;
 
     if (arrFavoriteList[i].show.image !== null) {
@@ -113,9 +108,13 @@ function paintFavorite() {
     }
 
     htmlFav += `<h3 class = "main__name--fav">${arrFavoriteList[i].show.name}</h3>`;
+    // htmlFav += `<i class="fas fa-trash js-reset-item"></i>`;
+    htmlFav += `<input type="button" class="js-reset-items" value = "X"/>`;
+
     htmlFav += "</li>";
   }
   listMoviesFav.innerHTML = htmlFav;
+  listenTrashItem();
 }
 
 //GUARDAR EN EL LOCAL STORAGE
@@ -132,7 +131,7 @@ function getLocalStorage() {
   paintFavorite();
 }
 getLocalStorage();
-
+//////////////////////////////////////////////////////////////////
 //RESET ALL (PAINT FAVORITES AND LOCALSTORAGE)
 function resetFavorites() {
   arrFavoriteList.splice(1, arrFavoriteList.length);
@@ -141,6 +140,15 @@ function resetFavorites() {
   paintFavorite();
 }
 
+// RESET EACH FAVORITE
+function resetItemFavorites(ev) {
+  arrFavoriteList.splice(indexItemFav, 1);
+  paintFavorite();
+  setLocalStorage();
+}
+resetItemFavorites();
+
+//////////////////////////////////////////////////////////////
 //LISTENERS
 btn.addEventListener("click", handleFilter);
 
@@ -152,3 +160,12 @@ function listenFavMovies() {
 }
 
 reset.addEventListener("click", resetFavorites);
+
+function listenTrashItem() {
+  const resetItems = document.querySelectorAll(".js-reset-items");
+  console.log(resetItems);
+  for (const resetItem of resetItems) {
+    console.log(resetItem);
+    resetItem.addEventListener("click", resetItemFavorites);
+  }
+}
