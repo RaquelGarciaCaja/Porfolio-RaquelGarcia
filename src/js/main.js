@@ -1,7 +1,7 @@
 "use strict";
 const input = document.querySelector(".js-input");
 const btn = document.querySelector(".js-button");
-const listMovies = document.querySelector(".main__list");
+const listMovies = document.querySelector(".js-main__list");
 const url = "http://api.tvmaze.com/search/shows?q=";
 const imgPlaceholder = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV";
 const reset = document.querySelector(".js-reset");
@@ -23,6 +23,7 @@ function getData() {
       paintMovies();
       listenFavMovies();
       paintFavorite();
+      listenTrashItem();
     });
 }
 
@@ -56,6 +57,7 @@ function paintMovies() {
 
     html += `<h3 class = "main__name">${movies[i].show.name}</h3>`;
     // html += `<p class = "main__genres" > Genero: ${movies[i].show.genres}</p>`;
+
     html += "</li>";
   }
 
@@ -91,12 +93,13 @@ function favMovies(ev) {
   paintMovies();
   listenFavMovies();
   paintFavorite();
+  listenTrashItem();
   setLocalStorage();
 }
 
 // PAINT FAVORITES
 function paintFavorite() {
-  const listMoviesFav = document.querySelector(".main__aside--fav");
+  const listMoviesFav = document.querySelector(".js-main__aside--fav");
   let htmlFav = "";
   for (let i = 0; i < arrFavoriteList.length; i++) {
     htmlFav += `<li class = "main__container--fav" id="${arrFavoriteList[i].show.id}">`;
@@ -108,15 +111,15 @@ function paintFavorite() {
     }
 
     htmlFav += `<h3 class = "main__name--fav">${arrFavoriteList[i].show.name}</h3>`;
-    // htmlFav += `<i class="fas fa-trash js-reset-item"></i>`;
-    htmlFav += `<input type="button" class="js-reset-items" value = "X"/>`;
+    htmlFav += `<i class="fas fa-trash js-reset-items"></i>`;
+    // htmlFav += `<input type="button" id = "${[i]}" class="js-reset-items" value = "X"/>`;
+    //htmlFav += `<button class="btn__remove--single" type="button">x</button>`;
 
     htmlFav += "</li>";
   }
   listMoviesFav.innerHTML = htmlFav;
-  listenTrashItem();
 }
-
+//////////////////////////////////////////////////////////////
 //GUARDAR EN EL LOCAL STORAGE
 function setLocalStorage() {
   localStorage.setItem("LocalStorageList", JSON.stringify(arrFavoriteList));
@@ -139,10 +142,16 @@ function resetFavorites() {
   localStorage.clear();
   paintFavorite();
 }
-
 // RESET EACH FAVORITE
 function resetItemFavorites(ev) {
-  arrFavoriteList.splice(indexItemFav, 1);
+  //ev.currentTarget es undefined
+  // const clickIdFav = parseInt(ev.currentTarget.parentElementid);
+  // const indexItemFav = arrFavoriteList.findIndex((click) => {
+  //   if (parseInt(click.show.id) === clickIdFav) return click;
+  // });
+  // arrFavoriteList.splice(indexItemFav, 1);
+  ///////////////////
+  //delete arrFavoriteList[ev.currentTarget];
   paintFavorite();
   setLocalStorage();
 }
@@ -163,7 +172,7 @@ reset.addEventListener("click", resetFavorites);
 
 function listenTrashItem() {
   const resetItems = document.querySelectorAll(".js-reset-items");
-  console.log(resetItems);
+  // console.log(resetItems);
   for (const resetItem of resetItems) {
     console.log(resetItem);
     resetItem.addEventListener("click", resetItemFavorites);
