@@ -31,23 +31,22 @@ function getData() {
 function paintMovies() {
   let html = "";
   for (let i = 0; i < movies.length; i++) {
-    let classFav;
-    const classIndex = movies.find((click) => {
-      for (let i = 0; i < click.length; i++) {
-        console.log(click[i]);
-        if (parseInt(click[i].show.id) === movies[i].show.id) return click;
-        console.log(click[i]);
-      }
-    });
+    let colorFavorite;
+    // const classIndex = movies.find((click) => {
+    //   if (parseInt(click.show.id) === parseInt(movies[i].show.id)) {
+    //     return click;
+    //   }
+    // });
 
-    if (classIndex === false) {
-      classFav = "style__fav";
-    } else {
-      classFav = "";
-    }
+    // if (classIndex === -1) {
+    //   console.log("entra");
+    //   colorFavorite = "color-favorite";
+    // } else {
+    //   colorFavorite = "";
+    // }
 
     const showimage = movies[i].show.image;
-    html += `<li class = "main__container ${classFav}" id="${movies[i].show.id}">`;
+    html += `<li class = "main__container  ${colorFavorite}" id="${movies[i].show.id}">`;
 
     if (showimage !== null) {
       html += `<img class = "main__img" src="${movies[i].show.image.medium}" alt="${movies[i].show.name}" />`;
@@ -65,7 +64,7 @@ function paintMovies() {
 }
 
 // HANDLER PAINT
-function handleFilter() {
+function handleFilter(ev) {
   getData();
 }
 
@@ -83,7 +82,7 @@ function favMovies(ev) {
       }
     });
     arrFavoriteList.push(foundIsFavorite);
-    movieCLick.classList.add("style__fav");
+    movieCLick.classList.add("color-favorite");
     //movieCLick.classList.remove("style__fav");
   } else {
     arrFavoriteList.splice(indexFav, 1);
@@ -144,12 +143,12 @@ function resetFavorites() {
 }
 // RESET EACH FAVORITE
 function resetItemFavorites(ev) {
-  //ev.currentTarget es undefined
+  // ev.currentTarget es undefined
   // const clickIdFav = parseInt(ev.currentTarget.parentElementid);
   // const indexItemFav = arrFavoriteList.findIndex((click) => {
   //   if (parseInt(click.show.id) === clickIdFav) return click;
   // });
-  // arrFavoriteList.splice(indexItemFav, 1);
+  //arrFavoriteList.splice(indexItemFav, 1);
   ///////////////////
   //delete arrFavoriteList[ev.currentTarget];
   paintFavorite();
@@ -174,7 +173,6 @@ function listenTrashItem() {
   const resetItems = document.querySelectorAll(".js-reset-items");
   // console.log(resetItems);
   for (const resetItem of resetItems) {
-    console.log(resetItem);
     resetItem.addEventListener("click", resetItemFavorites);
   }
 }

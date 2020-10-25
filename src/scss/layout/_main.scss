@@ -88,13 +88,14 @@
   &__aside-box {
     display: flex;
   }
+  &__name--fav {
+    font-size: 13px;
+  }
 }
 
-.style__fav {
+.color-favorite {
   background-color: #273c6e;
-
-  &__item {
-  }
+  border: 2px solid blue;
 }
 
 .reset {
