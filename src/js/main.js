@@ -2,7 +2,7 @@
 const input = document.querySelector(".js-input");
 const btn = document.querySelector(".js-button");
 const listMovies = document.querySelector(".js-main__list");
-const url = "http://api.tvmaze.com/search/shows?q=";
+const url = "//api.tvmaze.com/search/shows?q=";
 const imgPlaceholder = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV";
 const resetAllFavorites = document.querySelector(".js-reset");
 
@@ -147,7 +147,7 @@ function resetItemFavorites(ev) {
 
   paintFavorite();
   listenFavMovies();
-  paintMovies();
+  listenTrashItem();
   setLocalStorage();
 }
 
