@@ -6,8 +6,6 @@ const url = "http://api.tvmaze.com/search/shows?q=";
 const imgPlaceholder = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV";
 const resetAllFavorites = document.querySelector(".js-reset");
 
-//ev.preventDefault()
-// arrays datos y favoritos
 let movies = [];
 let arrFavoriteList = [];
 
@@ -41,7 +39,6 @@ function paintMovies() {
     });
 
     if (classIndex !== -1) {
-      console.log("entra");
       colorFavorite = "color-favorite";
     } else {
       colorFavorite = "";
@@ -57,12 +54,12 @@ function paintMovies() {
     }
 
     html += `<h3 class = "main__name">${movies[i].show.name}</h3>`;
-    // html += `<p class = "main__genres" > Genero: ${movies[i].show.genres}</p>`;
 
     html += "</li>";
   }
 
   listMovies.innerHTML = html;
+  listenFavMovies();
 }
 
 // HANDLER PAINT
@@ -85,10 +82,8 @@ function favMovies(ev) {
     });
     arrFavoriteList.push(foundIsFavorite);
     movieCLick.classList.add("color-favorite");
-    //movieCLick.classList.remove("style__fav");
   } else {
     arrFavoriteList.splice(indexFav, 1);
-    // movieCLick.classList.remove("style__fav");
   }
 
   paintMovies();
@@ -112,13 +107,12 @@ function paintFavorite() {
     }
 
     htmlFav += `<h3 class = "main__name--fav">${arrFavoriteList[i].show.name}</h3>`;
-    htmlFav += `<i class="fas fa-trash js-reset-items"></i>`;
-    // htmlFav += `<input type="button" id = "${[i]}" class="js-reset-items" value = "X"/>`;
-    //htmlFav += `<button class="btn__remove--single" type="button">x</button>`;
+    htmlFav += `<i class="fas fa-trash js-reset-items" id="${i}"></i>`;
 
     htmlFav += "</li>";
   }
   listMoviesFav.innerHTML = htmlFav;
+  listenFavMovies();
 }
 //////////////////////////////////////////////////////////////
 //GUARDAR EN EL LOCAL STORAGE
@@ -145,18 +139,15 @@ function resetFavorites() {
   localStorage.clear();
   paintFavorite();
 }
-// RESET EACH FAVORITE
 
+// RESET EACH FAVORITE
 function resetItemFavorites(ev) {
-  console.log(ev.currentTarget);
-  // const clickIdFav = ev.currentTarget.id;
-  // const indexItemFav = arrFavoriteList.findIndex((click) => {
-  //   if (parseInt(click.show.id) === parseInt(clickIdFav)) return click;
-  // });
-  // arrFavoriteList.splice(indexItemFav, 1);
-  ///////////////////
-  //delete arrFavoriteList[ev.currentTarget];
+  const removeIdFav = ev.currentTarget.id;
+  arrFavoriteList.splice(removeIdFav, 1);
+
   paintFavorite();
+  listenFavMovies();
+  paintMovies();
   setLocalStorage();
 }
 
@@ -177,6 +168,5 @@ function listenTrashItem() {
   const resetItems = document.querySelectorAll(".js-reset-items");
   for (const resetItem of resetItems) {
     resetItem.addEventListener("click", resetItemFavorites);
-    //console.log(resetItem);
   }
 }

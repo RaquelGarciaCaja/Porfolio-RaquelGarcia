@@ -40,6 +40,9 @@
     width: 230px;
     list-style: none;
     border-radius: 8px;
+    &:hover {
+      transform: scale(1.01);
+    }
     &--fav {
       border: 2px black solid;
       border-radius: 8px;
@@ -94,14 +97,16 @@
 }
 
 .color-favorite {
-  background-color: #273c6e;
-  border: 2px solid blue;
+  background-color: $color-secondary;
 }
 
 .reset {
   margin: 5px;
   height: 24px;
   padding: 2px;
+  &:hover {
+    transform: scale(1.01);
+  }
 }
 .hidden {
   display: none;
