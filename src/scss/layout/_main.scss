@@ -10,6 +10,7 @@
   &__form {
     width: 100%;
     padding: 5px 0 0 32px;
+    text-align: center;
 
     &--text {
       font-family: $font-secondary;
@@ -50,6 +51,9 @@
       margin: 10px;
       width: 100px;
       list-style: none;
+      &:hover {
+        transform: scale(1.01);
+      }
     }
   }
   &__img--fav {

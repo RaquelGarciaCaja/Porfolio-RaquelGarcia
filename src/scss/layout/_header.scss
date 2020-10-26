@@ -1,11 +1,58 @@
 .header {
-  background-color: $color-header;
+  background: rgba(183, 222, 237, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba(183, 222, 237, 1) 0%,
+    rgba(113, 206, 239, 1) 26%,
+    rgba(33, 180, 226, 1) 51%,
+    rgba(183, 222, 237, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(183, 222, 237, 1)),
+    color-stop(26%, rgba(113, 206, 239, 1)),
+    color-stop(51%, rgba(33, 180, 226, 1)),
+    color-stop(100%, rgba(183, 222, 237, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(183, 222, 237, 1) 0%,
+    rgba(113, 206, 239, 1) 26%,
+    rgba(33, 180, 226, 1) 51%,
+    rgba(183, 222, 237, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(183, 222, 237, 1) 0%,
+    rgba(113, 206, 239, 1) 26%,
+    rgba(33, 180, 226, 1) 51%,
+    rgba(183, 222, 237, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(183, 222, 237, 1) 0%,
+    rgba(113, 206, 239, 1) 26%,
+    rgba(33, 180, 226, 1) 51%,
+    rgba(183, 222, 237, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(183, 222, 237, 1) 0%,
+    rgba(113, 206, 239, 1) 26%,
+    rgba(33, 180, 226, 1) 51%,
+    rgba(183, 222, 237, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed', GradientType=1 );
+
   display: flex;
   justify-content: center;
   position: fixed;
   top: 0;
   width: 100%;
   padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
 
   &__title {
     font-family: $font-main;
