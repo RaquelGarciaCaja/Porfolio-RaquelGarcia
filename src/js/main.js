@@ -4,7 +4,7 @@ const btn = document.querySelector(".js-button");
 const listMovies = document.querySelector(".js-main__list");
 const url = "http://api.tvmaze.com/search/shows?q=";
 const imgPlaceholder = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV";
-const reset = document.querySelector(".js-reset");
+const resetAllFavorites = document.querySelector(".js-reset");
 
 //ev.preventDefault()
 // arrays datos y favoritos
@@ -32,18 +32,20 @@ function paintMovies() {
   let html = "";
   for (let i = 0; i < movies.length; i++) {
     let colorFavorite;
-    // const classIndex = movies.find((click) => {
-    //   if (parseInt(click.show.id) === parseInt(movies[i].show.id)) {
-    //     return click;
-    //   }
-    // });
+    const classIndex = arrFavoriteList.findIndex((favMovie) => {
+      if (favMovie.show.id === movies[i].show.id) {
+        return true;
+      } else {
+        return false;
+      }
+    });
 
-    // if (classIndex === -1) {
-    //   console.log("entra");
-    //   colorFavorite = "color-favorite";
-    // } else {
-    //   colorFavorite = "";
-    // }
+    if (classIndex !== -1) {
+      console.log("entra");
+      colorFavorite = "color-favorite";
+    } else {
+      colorFavorite = "";
+    }
 
     const showimage = movies[i].show.image;
     html += `<li class = "main__container  ${colorFavorite}" id="${movies[i].show.id}">`;
@@ -64,7 +66,7 @@ function paintMovies() {
 }
 
 // HANDLER PAINT
-function handleFilter(ev) {
+function handleFilter() {
   getData();
 }
 
@@ -130,11 +132,13 @@ function getLocalStorage() {
     arrFavoriteList = [];
   }
   paintMovies();
+  listenFavMovies();
   paintFavorite();
+  listenTrashItem();
 }
 getLocalStorage();
 //////////////////////////////////////////////////////////////////
-//RESET ALL (PAINT FAVORITES AND LOCALSTORAGE)
+//RESET ALL
 function resetFavorites() {
   arrFavoriteList.splice(1, arrFavoriteList.length);
   arrFavoriteList = [];
@@ -142,19 +146,19 @@ function resetFavorites() {
   paintFavorite();
 }
 // RESET EACH FAVORITE
+
 function resetItemFavorites(ev) {
-  // ev.currentTarget es undefined
-  // const clickIdFav = parseInt(ev.currentTarget.parentElementid);
+  console.log(ev.currentTarget);
+  // const clickIdFav = ev.currentTarget.id;
   // const indexItemFav = arrFavoriteList.findIndex((click) => {
-  //   if (parseInt(click.show.id) === clickIdFav) return click;
+  //   if (parseInt(click.show.id) === parseInt(clickIdFav)) return click;
   // });
-  //arrFavoriteList.splice(indexItemFav, 1);
+  // arrFavoriteList.splice(indexItemFav, 1);
   ///////////////////
   //delete arrFavoriteList[ev.currentTarget];
   paintFavorite();
   setLocalStorage();
 }
-resetItemFavorites();
 
 //////////////////////////////////////////////////////////////
 //LISTENERS
@@ -167,12 +171,12 @@ function listenFavMovies() {
   }
 }
 
-reset.addEventListener("click", resetFavorites);
+resetAllFavorites.addEventListener("click", resetFavorites);
 
 function listenTrashItem() {
   const resetItems = document.querySelectorAll(".js-reset-items");
-  // console.log(resetItems);
   for (const resetItem of resetItems) {
     resetItem.addEventListener("click", resetItemFavorites);
+    //console.log(resetItem);
   }
 }
