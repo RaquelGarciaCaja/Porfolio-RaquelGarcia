@@ -5,6 +5,7 @@ const listMovies = document.querySelector(".js-main__list");
 const url = "//api.tvmaze.com/search/shows?q=";
 const imgPlaceholder = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV";
 const resetAllFavorites = document.querySelector(".js-reset");
+const logBtn = document.querySelector(".js-log");
 
 let movies = [];
 let arrFavoriteList = [];
@@ -54,6 +55,7 @@ function paintMovies() {
     }
 
     html += `<h3 class = "main__name">${movies[i].show.name}</h3>`;
+    html += `<h3 class = "main__name">${movies[i].show.status}</h3>`;
 
     html += "</li>";
   }
@@ -168,5 +170,13 @@ function listenTrashItem() {
   const resetItems = document.querySelectorAll(".js-reset-items");
   for (const resetItem of resetItems) {
     resetItem.addEventListener("click", resetItemFavorites);
+  }
+}
+
+logBtn.addEventListener("click", logConsole);
+
+function logConsole() {
+  for (let i = 0; i < arrFavoriteList.length; i++) {
+    console.log(arrFavoriteList[i].show.name);
   }
 }
