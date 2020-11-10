@@ -1,4 +1,4 @@
-🎞 BUSCADOR DE SERIES DE PELÍCULAS
+🎞 BUSCADOR DE SERIES Y PELÍCULAS
 
 Contenido:
 - Estructura básica HTML y CSS
