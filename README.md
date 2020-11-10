@@ -1,4 +1,4 @@
-Evaluación final módulo 2: aplicación web de búsqueda de series/películas 
+BUSCADOR DE SERIES DE PELÍCULAS 🎞
 
 Contenido:
 - Estructura básica HTML y CSS
