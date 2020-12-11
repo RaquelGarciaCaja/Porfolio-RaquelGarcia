@@ -1,7 +1,19 @@
-🎞 BUSCADOR DE SERIES Y PELÍCULAS
+🎞 Ejercicio Popcorn and TV
 
-Contenido:
-- Estructura básica HTML y CSS
-- Búsqueda de las series/películas
-- Marcar y borrar las series/películas favoritas
-- Guardar la infomación que hemos marcado como favorito en el local storage
+Objetivo: Realizar una búsqueda con un filtro a través de un api de películas y series. Funcionalidad de añadir, eliminar favoritos y guardar en el localstorage.
+
+Herramientas Usadas:
+HTML5
+SASS
+JavaSript
+
+Pasos a seguir:
+
+1º: Pintado de las series a través de un api. Teniendo cada uno de ellos una tarjeta con su foto y su nombre.
+
+2º: Al pinchar en una serie, esta se añade a favoritos. Esto se ha podido ejecutar a través de un array vacío, que se le ha ido añadiendo y eliminando items. Además, cada item seleccionado se marca con otro color para diferenciar que esta en la lista de favritos.
+
+3º: Se han creado dos botones, uno de ellos que elimina toda la lista de favoritos, incluida en el localstorage, y otro, que elimina individualmente cada item.
+
+4º: Maquetación Maquetación realizada con SASS y CSS3.
+
