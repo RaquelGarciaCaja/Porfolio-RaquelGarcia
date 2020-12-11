@@ -11,9 +11,9 @@ Pasos a seguir:
 
 1º: Pintado de las series a través de un api. Teniendo cada uno de ellos una tarjeta con su foto y su nombre.
 
-2º: Al pinchar en una serie, esta se añade a favoritos. Esto se ha podido ejecutar a través de un array vacío, que se le ha ido añadiendo y eliminando items. Además, cada item seleccionado se marca con otro color para diferenciar que esta en la lista de favritos.
+2º: Al pinchar en una serie, esta se añade a favoritos. Esto se ha podido ejecutar a través de un array vacío, que se le ha ido añadiendo y eliminando items. Además, cada item seleccionado se marca con otro color para diferenciar que esta en la lista de favoritos.
 
-3º: Se han creado dos botones, uno de ellos que elimina toda la lista de favoritos, incluida en el localstorage, y otro, que elimina individualmente cada item.
+3º: Se han creado dos botones, uno de ellos que elimina toda la lista de favoritos, incluido el localstorage, y otro, que elimina individualmente cada item.
 
-4º: Maquetación Maquetación realizada con SASS y CSS3.
+4º: Maquetación realizada con SASS y CSS3.
 
