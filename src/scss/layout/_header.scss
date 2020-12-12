@@ -1,0 +1,77 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  font-family: $font-main;
+  padding: 20px;
+  opacity: 0.9;
+  background-color: lightblue;
+  &__sticky {
+    background-color: blue;
+  }
+  &__name {
+    font-family: $font-main;
+  }
+  &__nav {
+  }
+  &__ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__links {
+    text-decoration: none;
+    color: black;
+    font-size: $header-mobile;
+    padding: 8px;
+
+    &:hover {
+      color: blue;
+    }
+
+    @media all and (min-width: 768px) {
+      font-size: $header-tablet-desktop;
+    }
+  }
+  &__menu,
+  &__x {
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+    color: black;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .header__nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    transition: all 1s ease;
+    padding: 25px;
+  }
+
+  .header__links {
+    color: lightblue;
+  }
+  .header__menu {
+    display: block;
+    z-index: 999;
+    color: blue;
+  }
+  .header__x {
+    // display: none;
+    color: blue;
+  }
+}
+
+.hidden {
+  display: none;
+}

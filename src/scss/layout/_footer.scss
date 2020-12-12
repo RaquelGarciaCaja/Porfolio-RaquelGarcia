@@ -1,0 +1,28 @@
+.footer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid $color-second;
+  &--icon {
+    border: 2px solid $color-cuaternary;
+    border-radius: 50%;
+    padding: 5px 8px;
+    transition: 0.5s;
+    &:hover {
+      transition: 1s;
+      background-color: $color-main;
+    }
+  }
+  &--social {
+    font-size: 15px;
+    color: $color-cuaternary;
+  }
+  &--bold {
+    font-size: 20px;
+  }
+}
+
+// text-decoration: none;
+// color: black;
+// font-size: $header-mobile;
+// padding: 10px;

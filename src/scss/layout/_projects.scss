@@ -1,0 +1,138 @@
+.project {
+  background-color: lightblue;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--title {
+    padding: 10px;
+    font-family: $font-main;
+    text-align: center;
+    font-size: $header-mobile;
+    position: relative;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 50px;
+      background-color: black;
+      top: 21px;
+    }
+    &::before {
+      left: 90px;
+    }
+    &::after {
+      right: 90px;
+    }
+    @media all and (min-width: 768px) {
+      font-size: $header-tablet-desktop;
+      &::before {
+        left: 110px;
+        top: 26px;
+      }
+      &::after {
+        right: 110px;
+        top: 26px;
+      }
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 35px;
+      &::before {
+        left: 180px;
+        top: 38px;
+        height: 3px;
+      }
+      &::after {
+        right: 180px;
+        top: 38px;
+        height: 3px;
+      }
+    }
+  }
+
+  &--list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    @media all and(min-width:768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--container {
+    border: 2px solid black;
+    margin: 10px 20px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  &--project__title {
+    color: black;
+    text-align: center;
+    padding-top: 5px;
+    @media all and(min-width:768px) {
+      font-size: $header-tablet-desktop;
+    }
+    @media all and(min-width:1200px) {
+      font-size: 28px;
+    }
+  }
+
+  &--project__img {
+    height: 150px;
+    width: 200px;
+    cursor: pointer;
+    @media all and(min-width:768px) {
+      height: 200px;
+      width: 280px;
+    }
+    @media all and(min-width:1200px) {
+      height: 300px;
+      width: 380px;
+    }
+  }
+  &--hidden {
+    display: none;
+  }
+  &--socialMedia {
+    text-align: center;
+    padding: 10px 0;
+    @media all and (min-width: 768px) {
+      padding: 13px 0;
+    }
+    @media all and (min-width: 1200px) {
+      padding: 20px 0;
+    }
+  }
+  &--icon {
+    border: 2px solid $color-cuaternary;
+    border-radius: 50%;
+    margin: 0 5px;
+    padding: 5px 8px;
+    transition: 0.5s;
+    &:hover {
+      transition: 1s;
+      // cambio de colro
+      background-color: blue;
+    }
+    @media all and (min-width: 768px) {
+      margin: 0 15px;
+      padding: 14px 10px 8px;
+    }
+    @media all and (min-width: 1200px) {
+      margin: 0 35px;
+      padding: 20px 12px 13px;
+    }
+  }
+  &--social {
+    font-size: 15px;
+    color: $color-cuaternary;
+    @media all and (min-width: 768px) {
+      font-size: 25px;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 30px;
+    }
+  }
+}

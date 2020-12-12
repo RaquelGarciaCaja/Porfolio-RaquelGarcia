@@ -1,0 +1,110 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    padding: 10px;
+    font-family: $font-main;
+    text-align: center;
+    font-size: $header-mobile;
+    position: relative;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 50px;
+      background-color: black;
+      top: 21px;
+    }
+    &::before {
+      left: 90px;
+    }
+    &::after {
+      right: 90px;
+    }
+    @media all and (min-width: 768px) {
+      font-size: $header-tablet-desktop;
+      &::before {
+        left: 110px;
+        top: 26px;
+      }
+      &::after {
+        right: 110px;
+        top: 26px;
+      }
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 35px;
+      &::before {
+        left: 180px;
+        top: 38px;
+        height: 3px;
+      }
+      &::after {
+        right: 180px;
+        top: 38px;
+        height: 3px;
+      }
+    }
+  }
+  &__container {
+    margin: 0 20px;
+    padding: 10px;
+    @media all and(min-width:768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    // @media all and(min-width:1200px) {
+    //   margin: 90px;
+    // }
+  }
+  &__containerImg {
+    text-align: center;
+    margin: 5px;
+  }
+  &__img {
+    height: 250px;
+    border-radius: 44px;
+    @media all and(min-width:768px) {
+      height: 350px;
+    }
+  }
+  &__text {
+    margin: 5px;
+    opacity: 0.93;
+    border-radius: 44px;
+    @media all and(min-width:768px) {
+    }
+    @media all and(min-width:1200px) {
+      margin: 90px;
+    }
+  }
+  &__paragrah {
+    padding: 7px;
+    font-family: $font-main;
+    text-align: center;
+    font-size: 12px;
+
+    @media all and (min-width: 768px) {
+      font-size: 18px;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 20px;
+    }
+  }
+  &__cv {
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: $color-cuaternary;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    font-family: $font-main;
+    &:hover {
+      background-color: white;
+    }
+  }
+}

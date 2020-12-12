@@ -1,0 +1,55 @@
+.contact {
+  background-image: url("../images/playa.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &--text {
+    display: flex;
+    justify-self: center;
+    font-family: $font-main;
+    font-size: $main-mobile;
+    @media all and (min-width: 768px) {
+      font-size: $main-tabet;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: $main-desktop;
+    }
+  }
+  &--containerText,
+  &--containerSocial {
+    padding: 5px;
+  }
+
+  &--icon {
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 0 5px;
+    padding: 5px 8px;
+    transition: 0.5s;
+    &:hover {
+      transition: 1s;
+      background-color: lightblue;
+    }
+    @media all and (min-width: 768px) {
+      margin: 0 15px;
+      padding: 14px 10px 8px;
+    }
+    @media all and (min-width: 1200px) {
+      margin: 0 35px;
+      padding: 20px 12px 13px;
+    }
+  }
+  &--social {
+    font-size: 15px;
+    color: black;
+    @media all and (min-width: 768px) {
+      font-size: 25px;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 30px;
+    }
+  }
+}
