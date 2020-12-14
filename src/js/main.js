@@ -24,11 +24,6 @@ const close = document.querySelector(".projectDetails__close");
 // menu
 const clickMenu = () => {
   nav.classList.toggle("hidden");
-  btnNav.classList.add("header__navShow");
-  btnNav.classList.remove("header__nav");
-  // headerMenu.classList.add("hidden");
-  // notHeaderMenu.classList.remove("hidden");
-  // btnNav.classList.remove("hidden");
 };
 
 // details

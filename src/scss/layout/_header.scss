@@ -5,7 +5,7 @@
   position: fixed;
   width: 100%;
   font-family: $font-main;
-  padding: 20px;
+  // padding: 10px;
   background-color: $color-cuaternary;
   z-index: 999;
   @media all and (min-width: 768px) {
@@ -15,6 +15,7 @@
 
   &__name {
     font-family: $font-main;
+    padding: 20px;
   }
 
   &__ul {
@@ -28,6 +29,7 @@
     display: none;
     color: black;
     transition: 0.5s;
+    padding-right: 20px;
     // &:hover {
     //   transition: 0.5s;
     //   color: orange;
@@ -63,10 +65,14 @@
   position: fixed;
   top: 0;
   width: 100%;
-  display: flex;
   background-color: lightblue;
-  transition: all 1s ease;
-  padding: 23px;
+  display: flex;
+  // transition: all 1s ease;
+  padding: 20px;
+  @media all and (min-width: 768px) {
+    justify-content: space-evenly;
+    padding: 15px;
+  }
 
   @media all and (min-width: 768px) {
     padding: 15px;
