@@ -27,6 +27,8 @@
   &__title,
   &__description,
   &__tolls {
+    font-family: $font-main;
+
     display: block;
     color: black;
     border-radius: 10px;

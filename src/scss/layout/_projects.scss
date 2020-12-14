@@ -15,15 +15,15 @@
       content: "";
       position: absolute;
       height: 2px;
-      width: 50px;
+      width: 25px;
       background-color: black;
       top: 21px;
     }
     &::before {
-      left: 90px;
+      left: 85px;
     }
     &::after {
-      right: 90px;
+      right: 85px;
     }
     @media all and (min-width: 768px) {
       font-size: $header-tablet-desktop;
@@ -40,12 +40,12 @@
       font-size: 35px;
       &::before {
         left: 180px;
-        top: 38px;
+        top: 35px;
         height: 3px;
       }
       &::after {
         right: 180px;
-        top: 38px;
+        top: 35px;
         height: 3px;
       }
     }
@@ -65,9 +65,13 @@
     margin: 10px 20px;
     padding: 10px;
     border-radius: 20px;
+    @media all and(min-width:1200px) {
+      padding: 20px 50px;
+    }
   }
 
   &--project__title {
+    font-family: $font-main;
     color: black;
     text-align: center;
     padding-top: 5px;
@@ -114,7 +118,7 @@
     &:hover {
       transition: 1s;
       // cambio de colro
-      background-color: blue;
+      // background-color: blue;
     }
     @media all and (min-width: 768px) {
       margin: 0 15px;

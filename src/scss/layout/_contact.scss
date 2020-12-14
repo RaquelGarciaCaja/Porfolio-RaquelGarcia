@@ -31,7 +31,7 @@
     transition: 0.5s;
     &:hover {
       transition: 1s;
-      background-color: lightblue;
+      background-color: $color-cuaternary;
     }
     @media all and (min-width: 768px) {
       margin: 0 15px;

@@ -1,11 +1,8 @@
 "use strict";
 
-// hambuger
-const btnNav = document.querySelector(".js-show");
-const btnNotNav = document.querySelector(".js-notShow");
+// menu
+const btnNav = document.querySelector(".js-navShow");
 const nav = document.querySelector(".header__nav");
-const headerMenu = document.querySelector(".header__menu");
-const notHeaderMenu = document.querySelector(".header__x");
 
 // scroll
 // const page = document.querySelector(".page");
@@ -24,20 +21,29 @@ const close = document.querySelector(".projectDetails__close");
 //   }
 // };
 
+// menu
 const clickMenu = () => {
   nav.classList.toggle("hidden");
+  btnNav.classList.add("header__navShow");
+  btnNav.classList.remove("header__nav");
   // headerMenu.classList.add("hidden");
   // notHeaderMenu.classList.remove("hidden");
   // btnNav.classList.remove("hidden");
 };
+
+// details
 const closeDetails = () => {
   details.classList.remove("active");
 };
 
 //listeners
+// menu
 btnNav.addEventListener("click", clickMenu);
+
+// page
 // page.addEventListener("scroll", scrollPage);
 
+// details
 const detailsImg = document.querySelectorAll(".project--project__img").forEach((project) => {
   project.addEventListener("click", () => {
     const route = project.getAttribute("src");
