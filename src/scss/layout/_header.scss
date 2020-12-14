@@ -1,17 +1,18 @@
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100%;
   font-family: $font-main;
   padding: 20px;
-  background-color: $color-main;
+  background-color: $color-cuaternary;
   z-index: 999;
-
-  &__sticky {
-    // background-color: lightblue;
+  @media all and (min-width: 768px) {
+    justify-content: space-evenly;
+    padding: 15px;
   }
+
   &__name {
     font-family: $font-main;
   }
@@ -33,26 +34,27 @@
     // }
   }
   &__icon {
+    border-radius: 50%;
     margin: 0 5px;
-    padding: 3px 8px;
+    padding: 5px 8px;
     transition: 0.5s;
-
-    // @media all and (min-width: 768px) {
-    //   margin: 0 15px;
-    //   padding: 13px 10px 8px;
-    // }
-    // @media all and (min-width: 1200px) {
-    //   margin: 0 35px;
-    //   padding: 18px 12px 10px;
-    // }
+    @media all and (min-width: 768px) {
+      margin: 0 15px;
+      padding: 14px 10px 8px;
+    }
+    @media all and (min-width: 1200px) {
+      margin: 0 35px;
+      padding: 20px 12px 13px;
+    }
+    &:hover {
+      transition: 0.5s;
+    }
   }
   &__social {
-    font-size: 25px;
     color: black;
     transition: 0.5s;
     &:hover {
-      transition: 0.5s;
-      color: black;
+      color: lightblue;
     }
   }
 }
@@ -62,12 +64,13 @@
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: center;
   background-color: lightblue;
   transition: all 1s ease;
-  padding: 25px;
+  padding: 23px;
+
+  @media all and (min-width: 768px) {
+    padding: 15px;
+  }
 }
 
 .header__links {
@@ -75,6 +78,7 @@
   text-decoration: none;
   font-size: $header-mobile;
   padding: 8px;
+
   &:hover {
     color: $color-cuaternary;
   }
