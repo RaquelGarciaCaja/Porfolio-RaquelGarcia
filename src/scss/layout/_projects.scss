@@ -118,7 +118,8 @@
     &:hover {
       transition: 1s;
       // cambio de colro
-      // background-color: blue;
+      background-color: white;
+      border: 2px solid black;
     }
     @media all and (min-width: 768px) {
       margin: 0 15px;
@@ -132,6 +133,9 @@
   &--social {
     font-size: 15px;
     color: $color-cuaternary;
+    &:hover {
+      color: black;
+    }
     @media all and (min-width: 768px) {
       font-size: 25px;
     }

@@ -6,9 +6,9 @@
   width: 100%;
   font-family: $font-main;
   padding: 20px;
-  opacity: 0.9;
-  background-color: lightblue;
-  background-color: lightgray;
+  background-color: $color-main;
+  z-index: 999;
+
   &__sticky {
     // background-color: lightblue;
   }
@@ -26,17 +26,17 @@
     font-size: 20px;
     display: none;
     color: black;
+    transition: 0.5s;
+    // &:hover {
+    //   transition: 0.5s;
+    //   color: orange;
+    // }
   }
   &__icon {
-    border: 2px solid black;
-    border-radius: 50%;
     margin: 0 5px;
     padding: 3px 8px;
     transition: 0.5s;
-    &:hover {
-      transition: 1s;
-      background-color: $color-cuaternary;
-    }
+
     // @media all and (min-width: 768px) {
     //   margin: 0 15px;
     //   padding: 13px 10px 8px;
@@ -47,8 +47,13 @@
     // }
   }
   &__social {
-    font-size: 15px;
+    font-size: 25px;
     color: black;
+    transition: 0.5s;
+    &:hover {
+      transition: 0.5s;
+      color: black;
+    }
   }
 }
 
@@ -60,18 +65,18 @@
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
-  background-color: black;
+  background-color: lightblue;
   transition: all 1s ease;
   padding: 25px;
 }
 
 .header__links {
-  color: lightblue;
+  color: black;
   text-decoration: none;
   font-size: $header-mobile;
   padding: 8px;
   &:hover {
-    color: blue;
+    color: $color-cuaternary;
   }
   @media all and (min-width: 768px) {
     font-size: $header-tablet-desktop;
@@ -80,7 +85,6 @@
 .header__menuShow {
   display: block;
   z-index: 999;
-  color: lightblue;
 }
 
 .hidden {

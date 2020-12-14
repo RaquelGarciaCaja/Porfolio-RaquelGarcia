@@ -9,6 +9,7 @@
     text-align: center;
     font-size: $header-mobile;
     position: relative;
+
     &::after,
     &::before {
       content: "";
@@ -76,9 +77,10 @@
     }
   }
   &__text {
-    margin-left: 50px;
+    // margin-left: 50px;
     opacity: 0.93;
     border-radius: 44px;
+    text-align: center;
   }
   &__paragrah {
     padding: 7px;
