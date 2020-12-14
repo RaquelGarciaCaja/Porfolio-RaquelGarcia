@@ -8,6 +8,7 @@
   padding: 20px;
   opacity: 0.9;
   background-color: lightblue;
+  background-color: lightgray;
   &__sticky {
     // background-color: lightblue;
   }
@@ -24,6 +25,29 @@
     cursor: pointer;
     font-size: 20px;
     display: none;
+    color: black;
+  }
+  &__icon {
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 0 5px;
+    padding: 3px 8px;
+    transition: 0.5s;
+    &:hover {
+      transition: 1s;
+      background-color: $color-cuaternary;
+    }
+    // @media all and (min-width: 768px) {
+    //   margin: 0 15px;
+    //   padding: 13px 10px 8px;
+    // }
+    // @media all and (min-width: 1200px) {
+    //   margin: 0 35px;
+    //   padding: 18px 12px 10px;
+    // }
+  }
+  &__social {
+    font-size: 15px;
     color: black;
   }
 }
