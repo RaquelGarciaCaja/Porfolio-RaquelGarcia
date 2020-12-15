@@ -6,14 +6,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  filter: alpha(opacity=50);
+
   &--text {
     display: flex;
-    // text-transform: uppercase;
     justify-self: center;
     font-family: $font-main;
     font-size: $main-mobile;
-    // text-shadow: 0.1em 0.1em 0.2em black;
+    text-shadow: 0.1em 0.1em 0.2em black;
     @media all and (min-width: 768px) {
       font-size: $main-tabet;
     }
@@ -21,20 +20,26 @@
       font-size: $main-desktop;
     }
   }
+  &--containerText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &--containerText,
   &--containerSocial {
+    text-align: center;
     padding: 5px;
   }
-
   &--icon {
     border: 2px solid black;
     border-radius: 50%;
     margin: 0 5px;
     padding: 5px 8px;
     transition: 0.5s;
+    color: black;
     &:hover {
       transition: 1s;
-      background-color: $color-cuaternary;
+      background-color: lightblue;
     }
     @media all and (min-width: 768px) {
       margin: 0 15px;

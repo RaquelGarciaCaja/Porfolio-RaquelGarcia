@@ -5,17 +5,25 @@
   position: fixed;
   width: 100%;
   font-family: $font-main;
-  // padding: 10px;
+  padding: 10px;
   background-color: $color-cuaternary;
   z-index: 999;
   @media all and (min-width: 768px) {
-    justify-content: space-evenly;
-    padding: 15px;
+    justify-content: space-between;
   }
-
+  &__porfolio {
+    color: lightblue;
+  }
+  &__por,
+  &__porfolio {
+    font-size: $header-mobile;
+    @media all and (min-width: 768px) {
+      font-size: $header-tablet-desktop;
+    }
+  }
   &__name {
     font-family: $font-main;
-    padding: 20px;
+    padding: 8px;
   }
 
   &__ul {
@@ -64,18 +72,14 @@
 .header__nav {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background-color: lightblue;
   display: flex;
   // transition: all 1s ease;
-  padding: 20px;
+  padding: 18px;
   @media all and (min-width: 768px) {
-    justify-content: space-evenly;
-    padding: 15px;
-  }
-
-  @media all and (min-width: 768px) {
-    padding: 15px;
+    justify-content: space-between;
   }
 }
 

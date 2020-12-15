@@ -4,22 +4,9 @@
 const btnNav = document.querySelector(".js-navShow");
 const nav = document.querySelector(".header__nav");
 
-// scroll
-// const page = document.querySelector(".page");
-// const header = document.querySelector(".header");
-
 // details
 const details = document.querySelector(".projectDetails");
 const close = document.querySelector(".projectDetails__close");
-
-// const scrollPage = () => {
-//   console.log("enra");
-//   if (window.scrollY > 20) {
-//     header.classList.add("header__sticky");
-//   } else {
-//     header.classList.remove("header__sticky");
-//   }
-// };
 
 // menu
 const clickMenu = () => {
@@ -34,9 +21,6 @@ const closeDetails = () => {
 //listeners
 // menu
 btnNav.addEventListener("click", clickMenu);
-
-// page
-// page.addEventListener("scroll", scrollPage);
 
 // details
 const detailsImg = document.querySelectorAll(".project--project__img").forEach((project) => {
