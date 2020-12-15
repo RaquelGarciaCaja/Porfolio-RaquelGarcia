@@ -4,55 +4,358 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Series y películas</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Open+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/e9c34022b4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/e9c34022b4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="icon" href="./assets/images/fondo1.jpg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <div class="page">
       <header class="header">
-        <i class="fas fa-film header__icon"></i>
-        <h1 class="header__title">Series y películas</h1>
+        <section class="header__name">
+          <p class="header__por">Porfo<span class="header__porfolio">lio</span></p>
+        </section>
+        <nav class="header__nav hidden">
+          <ul class="header__ul">
+            <li><a href="./index.html#contact" class="header__links"> Contacto </a></li>
+            <li><a href="./index.html#aboutMe" class="header__links"> Sobre mi </a></li>
+            <li><a href="./index.html#project" class="header__links"> Proyectos </a></li>
+          </ul>
+        </nav>
+        <div class="header__menu header__menuShow js-navShow">
+          <i class="fas fa-bars"></i>
+        </div>
+        <!-- <div class="header__x js-navNotShow">
+          <i class="fas fa-times js-notShow"></i>
+        </div> -->
       </header>
 
-      <main class="main">
-        <form action="" class="main__form">
-          <label for="" class="main__form--text">Encuentra tu serie/película: </label>
-          <input type="text" class="main__form--input js-input" placeholder=" Ej: fringe" />
-          <input type="button" value="Buscar" class="main__form--button js-button" />
-        </form>
-        <section class="main-form">
-          <div class="main-form__list">
-            <ul class="main__list js-main__list">
-              <!-- aqui van las pelis/series -->
-            </ul>
-          </div>
+      <main id="projects" class="main">
+        <section class="contact" id="contact">
+          <section class="contact--containerText">
+            <span class="contact--text">Raquel Garcia Caja</span>
+            <span class="contact--text">Funio font-end developer</span>
+          </section>
+          <section class="contact--containerSocial">
+            <a
+              href="mailto:raquelgc8@gmail.com"
+              class="contact--icon"
+              target="_blank"
+              title="Email"
+              rel="noreferrer"
+              ><i class="far fa-envelope contact--social"></i
+            ></a>
 
-          <div class="main__aside">
-            <div class="main__aside-box">
-              <i class="far fa-star main__aside--start"></i>
-              <h3 class="main__aside--title">Favoritos</h3>
+            <a
+              href="https://www.linkedin.com/in/raquelgarciacaja/"
+              class="contact--icon"
+              target="_blank"
+              title="Linkedin"
+              rel="noreferrer"
+              ><i class="contact--social fab fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://github.com/RaquelGarciaCaja"
+              class="contact--icon"
+              target="_blank"
+              title="Github"
+              rel="noreferrer"
+            >
+              <i class="contact--social fab fa-github-alt"></i>
+            </a>
+          </section>
+        </section>
+
+        <section class="about" id="aboutMe">
+          <h3 class="about__title">Sobre mi</h3>
+          <section class="about__container">
+            <div class="about__containerImg">
+              <img class="about__img" src="./assets/images/Raquel.jpg" alt="Raquel" />
             </div>
+            <section class="about__text">
+              <p class="about__paragrah">
+                Desarrolladora front-end, la programación ha dado un nuevo empujón a mi vida y me encanta.
+              </p>
+              <p class="about__paragrah">
+                Antes, estudié terapia ocupacional vinculada a la educación especial y su rehabilitación,
+                esto me ha ayudado a tener gran aptitud para trabajar en equipos multidisciplinares teniendo
+                en cuenta la empatía y adaptación a diferentes contextos.
+              </p>
+              <p class="about__paragrah">
+                He coordinado equipos pequeños, tengo buena capacidad para la organización y la
+                planificación de objetivos así como para la persecución de los mismos, a través de un
+                constante trabajo.
+              </p>
+            </section>
+          </section>
 
-            <div><input class="reset js-reset" value="Borrar" type="button" /></div>
-            <ul class="main__aside--fav js-main__aside--fav">
-              <!-- aqui van los favoritos -->
-            </ul>
+          <a class="about__cv" href="../assets/pdf/Raquel-Garcia-Caja-CV.pdf" download="">Descargar CV</a>
+        </section>
+
+        <section class="project" id="project">
+          <div>
+            <h3 class="project--title">Proyectos</h3>
+          </div>
+          <div class="project--list">
+            <section
+              class="project--container"
+              data-tolls="Herramientas usadas: JavaScript, HTML, CSS3 (SASS), FlexBox, Grid, Git y Github."
+              data-description="Objetivo: Crear una plataforma de series y películas que gracias la petición de datos a un API podemos buscar las que queramos. Y, gracias a un array vacío podemos añadir y eliminarlas  de favoritos."
+              data-title="Popcorcon and TV"
+            >
+              <h4 class="project--project__title">Popcorcon and TV</h4>
+              <div class="project--socialMedia"> 
+                <a
+                href="https://github.com/RaquelGarciaCaja/Popcorn-and-TV"
+                class="project--icon"
+                target="_blank"
+                title="Github"
+                rel="noreferrer"
+                >
+                <i class="project--social fab fa-github-alt"></i></a>
+              
+                <a href="http://beta.adalab.es/modulo-2-evaluacion-final-RaquelGarciaCaja/"
+                class="project--icon"
+                target="_blank"
+                title="Github"
+                rel="noreferrer"
+                >
+                <i class="project--social fas fa-desktop"></i></a>
+              </div>
+              <img
+                class="project--project__img"
+                src="./assets/images/popcorn.PNG"
+                alt="Popcorcon and TV"
+                title="Popcorcon and TV"
+            />
+            </section>
+
+            <section
+              class="project--container"
+              data-tolls="Herramientas usadas: JavaScript, React, HTML, CSS3 (SASS), FlexBox, Grid, Git y Github."
+              data-description="Objetivo: web con filtros, en este caso por nombre, por especie y por género, vinculado con un api que contiene los personajes de Rick and Morty. También permite ver con más detalle la información de cada personaje.. "
+              data-title="Rick and Morty"
+            >
+              <h4 class="project--project__title">Rick and Morty</h4>
+              <div class="project--socialMedia"> 
+                <a
+                href="https://github.com/RaquelGarciaCaja/Rick-and-Morty"
+                class="project--icon"
+                target="_blank"
+                title="Github"
+                rel="noreferrer"
+                >
+                <i class="project--social fab fa-github-alt"></i></a>
+              
+                <a href="http://beta.adalab.es/modulo-3-evaluacion-final-RaquelGarciaCaja/#/"
+                class="project--icon"
+                target="_blank"
+                title="Github"
+                rel="noreferrer"
+                >
+                <i class="project--social fas fa-desktop"></i></a>
+              </div>
+              <img
+                class="project--project__img"
+                src="./assets/images/rick.PNG"
+                alt="Rick and Morty"
+                title="Rick and Morty"
+              />
+            </section>
+            <section
+              class="project--container"
+              data-tolls="Herramientas usadas: JavaScript, HTML, CSS3 (SASS), FlexBox, Grid, Git y Github."
+              data-description="Objetivo: app interactiva, permite buscar el nombre de los pokemons, pudiendo añadir a favoritos los que elijas."
+              data-title="!Hazte con todos!"
+            >
+              <h4 class="project--project__title">!Hazte con todos!</h4>
+             <div class="project--socialMedia"> 
+                <a
+                href="https://github.com/RaquelGarciaCaja/Pokemon-hazte-con-todos-"
+                class="project--icon"
+                target="_blank"
+                title="Github"
+                rel="noreferrer"
+                >
+                <i class="project--social fab fa-github-alt"></i></a>
+              
+                <a href="http://beta.adalab.es/modulo-3-evaluacion-intermedia-RaquelGarciaCaja/"
+                class="project--icon"
+                target="_blank"
+                title="Github"
+                rel="noreferrer"
+                >
+                <i class="project--social fas fa-desktop"></i></a>
+              </div>
+              <img
+                class="project--project__img"
+                src="./assets/images/pokemon.PNG"
+                alt="Pokemon"
+                title="Pokemon"
+              />
+            </section>
+            <section
+              class="project--container"
+              data-tolls="Herramientas usadas: JavaScript, HTML, CSS3 (SASS), FlexBox, Grid, Git y Github."
+              data-description="Objetivo: Proyecto grupal. App interactiva, permite al usuario elegir estilos, escribir sus datos y generar una tarjeta que puede compartir a través de un link o por Twitter."
+              data-title="Div_as profile-cards"
+            >
+              <h4 class="project--project__title" value="Div_as profile-cards">Div_as profile-cards</h4>
+              <div class="project--socialMedia"> 
+                <a
+                href="https://github.com/RaquelGarciaCaja/Div_as-Profile-Cards"
+                class="project--icon"
+                target="_blank"
+                title="Github"
+                rel="noreferrer"
+                >
+                <i class="project--social fab fa-github-alt"></i></a>
+              
+                <a href="http://beta.adalab.es/project-promo-k-module-2-team-7/"
+                class="project--icon"
+                target="_blank"
+                title="Github"
+                rel="noreferrer"
+                >
+                <i class="project--social fas fa-desktop"></i></a>
+              </div>
+              <img
+                class="project--project__img"
+                src="./assets/images/divas.PNG"
+                alt="Div_as profile-cards"
+                title="Div_as profile-cards"
+              />
+            </section>
+
+            <section
+              class="project--container"
+              data-tolls="Herramientas usadas:HTML, CSS3 (SASS), FlexBox, Grid, Git y Github.""
+              data-description="Objetivo: Proyecto grupal. Web con dos páginas, una con la información de diferentes personas y otra un formulario de contacto."
+              data-title="Adarangers"
+            >
+              <h4 class="project--project__title">Adarangers</h4>
+              <div class="project--socialMedia"> 
+                <a
+                href="https://github.com/RaquelGarciaCaja/Div_as-Profile-Cards"
+                class="project--icon"
+                target="_blank"
+                title="Github"
+                rel="noreferrer"
+                >
+                <i class="project--social fab fa-github-alt"></i></a>
+              
+                <a href="http://beta.adalab.es/project-promo-k-module-2-team-7/"
+                class="project--icon"
+                target="_blank"
+                title="Github"
+                rel="noreferrer"
+                >
+                <i class="project--social fas fa-desktop"></i></a>
+              </div>
+              <img
+                class="project--project__img"
+                src="./assets/images/adarangers.PNG"
+                alt="Adarangers"
+                title="Adarangers"
+              />
+            </section>
+
+            <section
+              class="project--container"
+              data-tolls="Herramientas usadas: React, JavaScript, HTML, CSS3 (SASS), FlexBox, Grid, Git y Github."
+            data-description="Objetivo: proyecto grupal. A partir de un proyecto ya creado con JavaScript, se ha modificado implementando React desde cero."
+              data-title="Montgomery-Card-Refactored"
+            >
+              <h4 class="project--project__title">Montgomery-Card-Refactored</h4>
+            <div class="project--socialMedia"> 
+                <a
+                href="https://github.com/RaquelGarciaCaja/Montgomery-Card-Refactored"
+                class="project--icon"
+                target="_blank"
+                title="Github"
+                rel="noreferrer"
+                >
+                <i class="project--social fab fa-github-alt"></i></a>
+              
+                <a href="http://beta.adalab.es/project-promo-k-module-3-team-9/#/"
+                class="project--icon"
+                target="_blank"
+                title="Github"
+                rel="noreferrer"
+                >
+                <i class="project--social fas fa-desktop"></i></a>
+              </div>
+              <img
+                class="project--project__img"
+                src="./assets/images/mongomery.PNG"
+                alt="Montgomery-Card-Refactored"
+                title="Montgomery-Card-Refactored"
+              />
+            </section>
           </div>
         </section>
+
+        <section class="projectDetails">
+          <div class="projectDetails__container">
+            <i class="fas fa-times projectDetails__close"></i>
+            <h4 class="projectDetails__title"></h4>
+            <div class="projectDetails__containerImg">
+              <img class="projectDetails__img" src="" />
+            </div>
+            <p class="projectDetails__description"></p>
+            <p class="projectDetails__tolls"></p>
+          </div>
+        </section>
+
       </main>
 
-      
+      <footer class="footer" id="contact">
+        <span class="footer__create">Creado por Raquel García Caja</span>
+        <section class="footer__name">
+          <a
+            href="mailto:raquelgc8@gmail.com"
+            class="footer__icon"
+            target="_blank"
+            title="Email"
+            rel="noreferrer"
+            ><i class="far fa-envelope footer__social"></i
+          ></a>
+
+          <a
+            href="https://www.linkedin.com/in/raquelgarciacaja/"
+            class="footer__icon"
+            target="_blank"
+            title="Linkedin"
+            rel="noreferrer"
+            ><i class="footer__social fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/RaquelGarciaCaja"
+            class="footer__icon"
+            target="_blank"
+            title="Github"
+            rel="noreferrer"
+          >
+            <i class="footer__social fab fa-github-alt"></i>
+          </a>
+        </section>
+      </footer>
+
     </div>
     <script src="./assets/js/main.js"></script>
   </body>
