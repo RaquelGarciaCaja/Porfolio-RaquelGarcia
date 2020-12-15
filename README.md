@@ -1,9 +1,9 @@
-# Raquel Garcia Porfolio 💙 
+### Raquel Garcia Porfolio 💙 
 Objetivo: Visualizar los proyectos que he realizado.
 Herramientas usadas: JavaScript, HTML, CSS3 (SASS), FlexBox, Grid y Gulp.
 
 
-# Instalación 🔧
+### Instalación 🔧
 ```bash
 npm install: 
 ```
@@ -20,7 +20,7 @@ npm run docs:
 para publicarlo en GitHub Pages.
 
 
-# Proyecto ⭐️
+### Proyecto ⭐️
 El proyecto esta divido en:
 
 ```
