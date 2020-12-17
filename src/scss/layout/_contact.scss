@@ -13,28 +13,33 @@
     font-family: $font-main;
     font-size: $main-mobile;
     color: white;
-    text-shadow: 0.1em 0.1em 0.2em white;
+    // text-shadow: 0.1em 0.1em 0.2em white;
     @media all and (min-width: 768px) {
       font-size: $main-tabet;
-      text-shadow: 0.1em 0.1em 0.2em black;
-
-      color: black;
     }
     @media all and (min-width: 1200px) {
       font-size: $main-desktop;
-      color: white;
-      text-shadow: 0.1em 0.1em 0.2em white;
     }
   }
   &--containerText {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: black 2px solid;
+    background-color: black;
+    border-radius: 22px;
+    opacity: 0.8;
   }
   &--containerText,
   &--containerSocial {
     text-align: center;
-    padding: 5px;
+    padding: 15px;
+    @media all and (min-width: 768px) {
+      padding: 18px;
+    }
+    @media all and (min-width: 1200px) {
+      padding: 20px;
+    }
   }
   &--icon {
     border: 2px solid black;
@@ -67,3 +72,7 @@
     }
   }
 }
+
+// .contactt {
+//   display: flex;
+// }
