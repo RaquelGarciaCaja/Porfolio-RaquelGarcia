@@ -12,12 +12,18 @@
     justify-self: center;
     font-family: $font-main;
     font-size: $main-mobile;
-    text-shadow: 0.1em 0.1em 0.2em black;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em white;
     @media all and (min-width: 768px) {
       font-size: $main-tabet;
+      text-shadow: 0.1em 0.1em 0.2em black;
+
+      color: black;
     }
     @media all and (min-width: 1200px) {
       font-size: $main-desktop;
+      color: white;
+      text-shadow: 0.1em 0.1em 0.2em white;
     }
   }
   &--containerText {
