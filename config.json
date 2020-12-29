@@ -23,9 +23,7 @@
     "dist": "docs/"
   },
   "js": {
-    "src": [
-      "src/js/**/*.js"
-    ],
+    "src": ["src/js/**/*.js"],
     "dest": "public/assets/js/",
     "dist": "docs/assets/js/"
   },
@@ -33,6 +31,11 @@
     "src": "src/images/**/*.{gif,jpg,jpeg,JPG,JPEG,png,svg}",
     "dest": "public/assets/images/",
     "dist": "docs/assets/images/"
+  },
+  "pdf": {
+    "src": "src/pdf/**/*.pdf",
+    "dest": "public/assets/pdf/",
+    "dist": "docs/assets/pdf/"
   },
   "watch": {
     "html": "src/**/*.html"
