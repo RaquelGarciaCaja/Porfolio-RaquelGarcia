@@ -41,17 +41,11 @@
       padding: 20px;
     }
   }
+
   &--icon {
-    border: 2px solid black;
-    border-radius: 50%;
     margin: 0 5px;
     padding: 5px 8px;
-    transition: 0.5s;
-    color: black;
-    &:hover {
-      transition: 1s;
-      background-color: lightblue;
-    }
+
     @media all and (min-width: 768px) {
       margin: 0 15px;
       padding: 14px 10px 8px;
@@ -62,8 +56,13 @@
     }
   }
   &--social {
-    font-size: 15px;
+    font-size: 20px;
     color: black;
+    transition: 0.5s;
+    &:hover {
+      transition: 1s;
+      color: $color-main;
+    }
     @media all and (min-width: 768px) {
       font-size: 25px;
     }
@@ -72,7 +71,3 @@
     }
   }
 }
-
-// .contactt {
-//   display: flex;
-// }

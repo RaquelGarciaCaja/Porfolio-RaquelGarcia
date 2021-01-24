@@ -1,28 +1,17 @@
 "use strict";
-
-// menu
 const btnNav = document.querySelector(".js-navShow");
 const nav = document.querySelector(".header__nav");
-
-// details
 const details = document.querySelector(".projectDetails");
 const close = document.querySelector(".projectDetails__close");
 
-// menu
 const clickMenu = () => {
   nav.classList.toggle("hidden");
 };
 
-// details
 const closeDetails = () => {
   details.classList.remove("active");
 };
 
-//listeners
-// menu
-btnNav.addEventListener("click", clickMenu);
-
-// details
 const detailsImg = document.querySelectorAll(".project--project__img").forEach((project) => {
   project.addEventListener("click", () => {
     const route = project.getAttribute("src");
@@ -39,3 +28,4 @@ const detailsImg = document.querySelectorAll(".project--project__img").forEach((
 });
 
 close.addEventListener("click", closeDetails);
+btnNav.addEventListener("click", clickMenu);
