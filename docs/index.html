@@ -25,7 +25,7 @@
 
   <body>
     <div class="page">
-      <header class="header">
+      <header class="header" id="header">
         <section class="header__name">
           <p class="header__por">Portfo<span class="header__porfolio">lio</span></p>
         </section>
@@ -39,50 +39,16 @@
         <div class="header__menu header__menuShow js-navShow">
           <i class="fas fa-bars"></i>
         </div>
-        <!-- <div class="header__x js-navNotShow">
-          <i class="fas fa-times js-notShow"></i>
-        </div> -->
       </header>
 
       <main id="projects" class="main">
-        <main class="contactt">
-          <section class="contact" id="contact">
+        <main>
+          <section class="contact">
             <section class="contact--containerText">
               <span class="contact--text">Raquel Garcia Caja</span>
               <span class="contact--text">Junior font-end developer</span>
             </section>
-            <section class="contact--containerSocial">
-              <a
-                href="mailto:raquelgc8@gmail.com"
-                class="contact--icon"
-                target="_blank"
-                title="Email"
-                rel="noreferrer"
-                ><i class="far fa-envelope contact--social"></i
-              ></a>
-
-              <a
-                href="https://www.linkedin.com/in/raquelgarciacaja/"
-                class="contact--icon"
-                target="_blank"
-                title="Linkedin"
-                rel="noreferrer"
-                ><i class="contact--social fab fa-linkedin-in"></i
-              ></a>
-              <a
-                href="https://github.com/RaquelGarciaCaja"
-                class="contact--icon"
-                target="_blank"
-                title="Github"
-                rel="noreferrer"
-              >
-                <i class="contact--social fab fa-github-alt"></i>
-              </a>
-            </section>
           </section>
-          <!-- <div>
-            <img src="../assets/images/playa.jpg" alt="" />
-          </div> -->
         </main>
 
         <section class="about" id="aboutMe">
@@ -108,11 +74,7 @@
             </section>
           </section>
 
-          <a
-            target="_blank"
-            class="about__cv"
-            href="https://github.com/RaquelGarciaCaja/Porfolio-RaquelGarcia/blob/main/src/pdf/Raquel-Garcia-Caja--CV.pdf"
-            download=""
+          <a target="_blank" class="about__cv" href="./assets/pdf/Raquel-Garcia-Caja-CV.pdf" download=""
             >Descargar CV</a
           >
         </section>
@@ -124,7 +86,7 @@
           <div class="project--list">
             <section
               class="project--container"
-              data-tolls="Herramientas usadas: JavaScript, HTML, CSS3 (SASS), FlexBox, Grid, Git y Github."
+              data-tolls="Herramientas usadas: JavaScript, HTML, CSS (SASS)."
               data-description="Objetivo: Plataforma de series y películas. A través de los datos de un API se muestra un listado que se puede filtrar por el nombre. Además se pueden añadir y eliminar de favoritos."
               data-title="Popcorcon and TV"
             >
@@ -159,7 +121,7 @@
             </section>
             <section
               class="project--container"
-              data-tolls="Herramientas usadas: JavaScript, HTML, CSS3 (SASS), FlexBox, Grid, Git y Github."
+              data-tolls="Herramientas usadas: JavaScript, HTML, CSS (SASS)."
               data-description="Objetivo: juego basado en el clásico piedra, papel o tijera; añadiendo dos elementos nuevos (lagarto y Spock) de la serie The Big Bang Theory."
               data-title="Piedra-papel-tijera-lagarto-spock"
             >
@@ -197,7 +159,7 @@
             </section>
             <section
               class="project--container"
-              data-tolls="Herramientas usadas: JavaScript, React, HTML, CSS3 (SASS), FlexBox, Grid, Git y Github."
+              data-tolls="Herramientas usadas: JavaScript, React, HTML, CSS (SASS)."
               data-description="Objetivo: web con filtros, en este caso por nombre, por especie y por género, vinculado con un api que contiene los personajes de Rick and Morty. También permite ver con más detalle la información de cada personaje. "
               data-title="Rick and Morty"
             >
@@ -232,7 +194,7 @@
             </section>
             <section
               class="project--container"
-              data-tolls="Herramientas usadas: JavaScript, HTML, CSS3 (SASS), FlexBox, Grid, Git y Github."
+              data-tolls="Herramientas usadas: JavaScript, HTML, CSS (SASS)."
               data-description="Objetivo: El usuario necesita encontrar el tesoro que esta oculto (éste esta creado con unas coordenadas aleatorias). Al pinchar en la imagen te dirá si esta caliente o frio en relación a la distancia que te separa del tesoro. "
               data-title="Find the treasure"
             >
@@ -267,7 +229,7 @@
             </section>
             <section
               class="project--container"
-              data-tolls="Herramientas usadas: JavaScript, HTML, CSS3 (SASS), FlexBox, Grid, Git y Github."
+              data-tolls="Herramientas usadas: JavaScript, React, HTML, CSS (SASS)."
               data-description="Objetivo: app interactiva que permite buscar el nombre de los pokemons y añadir a tu pokedex los favoritos."
               data-title="!Hazte con todos!"
             >
@@ -302,7 +264,7 @@
             </section>
             <section
               class="project--container"
-              data-tolls="Herramientas usadas: JavaScript, HTML, CSS3 (SASS), FlexBox, Grid, Git y Github."
+              data-tolls="Herramientas usadas: JavaScript, HTML, CSS (SASS)."
               data-description="Objetivo: proyecto grupal. Permite al usuario elegir estilos, escribir sus datos y generar una tarjeta que puede compartir a través de un link o por Twitter."
               data-title="Div_as profile-cards"
             >
@@ -338,7 +300,7 @@
 
             <section
               class="project--container"
-              data-tolls="Herramientas usadas: HTML, CSS3 (SASS), FlexBox, Grid, Git y Github."
+              data-tolls="Herramientas usadas: HTML, CSS (SASS)."
               data-description="Objetivo: proyecto grupal. Web con dos páginas, una con información detallada de las integrantes del grupo y otra con un formulario de contacto. Descata el uso del CSS y la sintaxis de los fichero de HTML"
               data-title="Adarangers"
             >
@@ -374,7 +336,7 @@
 
             <section
               class="project--container"
-              data-tolls="Herramientas usadas: React, JavaScript, HTML, CSS3 (SASS), FlexBox, Grid, Git y Github."
+              data-tolls="Herramientas usadas: JavaScript, React, HTML, CSS (SASS)."
               data-description="Objetivo: proyecto grupal. A partir de un proyecto creado con JavaScript, se ha modificado implementando React."
               data-title="Montgomery-Card-Refactored"
             >
@@ -411,6 +373,10 @@
               />
             </section>
           </div>
+
+          <div class="project--containerIcon" title="pincha para ir arriba">
+            <a href="#header"><i class="project--iconUp fas fa-arrow-up"></i></a>
+          </div>
         </section>
 
         <section class="projectDetails">
@@ -428,35 +394,48 @@
       </main>
 
       <footer class="footer" id="contact">
-        <span class="footer__create">Creado por Raquel García Caja</span>
-        <section class="footer__name">
-          <a
-            href="mailto:raquelgc8@gmail.com"
-            class="footer__icon"
-            target="_blank"
-            title="Email"
-            rel="noreferrer"
-            ><i class="far fa-envelope footer__social"></i
-          ></a>
+        <h2 class="footer__talk">¿Hablamos?</h2>
 
-          <a
-            href="https://www.linkedin.com/in/raquelgarciacaja/"
-            class="footer__icon"
-            target="_blank"
-            title="Linkedin"
-            rel="noreferrer"
-            ><i class="footer__social fab fa-linkedin-in"></i
-          ></a>
-          <a
-            href="https://github.com/RaquelGarciaCaja"
-            class="footer__icon"
-            target="_blank"
-            title="Github"
-            rel="noreferrer"
-          >
-            <i class="footer__social fab fa-github-alt"></i>
-          </a>
+        <section class="footer__name">
+          <div class="footer__container js-containerLinkSocial">
+            <a
+              href="mailto:raquelgc8@gmail.com"
+              class="footer__icon"
+              target="_blank"
+              title="Email"
+              rel="noreferrer"
+              ><i class="far fa-envelope footer__social"></i
+            ></a>
+            <h6 class="footer__subTitle">raquelgc8@gmail.com</h6>
+          </div>
+          <div class="footer__container js-containerLinkSocial">
+            <a
+              href="https://www.linkedin.com/in/raquelgarciacaja/"
+              class="footer__icon"
+              target="_blank"
+              title="Linkedin"
+              rel="noreferrer"
+              ><i class="footer__social fab fa-linkedin-in"></i
+            ></a>
+            <h6 class="footer__subTitle">RaquelGarciaCaja</h6>
+          </div>
+          <div class="footer__container js-containerLinkSocial">
+            <a
+              href="https://github.com/RaquelGarciaCaja"
+              class="footer__icon"
+              target="_blank"
+              title="Github"
+              rel="noreferrer"
+            >
+              <i class="footer__social fab fa-github-alt"></i>
+            </a>
+            <h6 class="footer__subTitle">RaquelGarciaCaja</h6>
+          </div>
         </section>
+
+        <span class="footer__create"
+          >Creado por Raquel García Caja <span class="footer__heart">❤︎</span></span
+        >
       </footer>
 
     </div>
