@@ -28,10 +28,10 @@
     font-size: 20px;
     color: black;
     cursor: pointer;
-    transition: 0.5s;
-    &:hover {
-      color: lightblue;
-    }
+    // transition: 0.5s;
+    // &:hover {
+    //   color: lightblue;
+    // }
   }
   &__talk {
     font-family: $font-main;
@@ -46,10 +46,11 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 10px;
-    transition: 0.5s;
-    &:hover {
-      color: lightblue;
-    }
+    // transition: 0.5s;
+    // &:hover {
+    //   background-color: $color-main;
+    //   color: $color-main;
+    // }
   }
   &__subTitle {
     display: none;
@@ -60,4 +61,8 @@
       margin: 0 15px;
     }
   }
+}
+
+.blue {
+  color: lightblue;
 }

@@ -96,6 +96,7 @@
     }
   }
   &__cv {
+    cursor: pointer;
     font-family: $font-main;
     font-size: $header-mobile;
     border: 2px solid $color-cuaternary;
