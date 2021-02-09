@@ -11,15 +11,20 @@
     padding: 20px 0 8px 0;
   }
   &__icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 10px;
     margin: 0 5px;
     padding: 0 8px;
     transition: 0.5s;
+    text-decoration: none;
     @media all and (min-width: 768px) {
-      margin: 0 15px;
+      margin: 0px;
+      padding: 0;
     }
-    @media all and (min-width: 1200px) {
-      margin: 0 35px;
-    }
+
     &:hover {
       transition: 0.5s;
     }
@@ -28,14 +33,16 @@
     font-size: 20px;
     color: black;
     cursor: pointer;
-    // transition: 0.5s;
-    // &:hover {
-    //   color: lightblue;
-    // }
+    transition: 0.7s;
+
+    &:hover {
+      transform: rotateY(180deg);
+      transition: 0.7s;
+    }
   }
   &__talk {
     font-family: $font-main;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
   }
   &__name {
     display: flex;
@@ -46,14 +53,10 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 10px;
-    // transition: 0.5s;
-    // &:hover {
-    //   background-color: $color-main;
-    //   color: $color-main;
-    // }
   }
   &__subTitle {
     display: none;
+    color: black;
     @media all and (min-width: 768px) {
       display: flex;
       font-family: $font-main;
@@ -64,5 +67,5 @@
 }
 
 .blue {
-  color: lightblue;
+  color: $color-main;
 }

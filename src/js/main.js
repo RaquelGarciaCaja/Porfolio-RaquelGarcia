@@ -1,13 +1,8 @@
 "use strict";
-const btnNav = document.querySelector(".js-navShow");
 const nav = document.querySelector(".header__nav");
 const details = document.querySelector(".projectDetails");
 const close = document.querySelector(".projectDetails__close");
 
-if (window.)
-  const clickMenu = () => {
-    nav.classList.toggle("hidden");
-  };
 const closeDetails = () => {
   details.classList.remove("active");
 };
@@ -28,4 +23,3 @@ const detailsImg = document.querySelectorAll(".project--project__img").forEach((
 });
 
 close.addEventListener("click", closeDetails);
-btnNav.addEventListener("click", clickMenu);

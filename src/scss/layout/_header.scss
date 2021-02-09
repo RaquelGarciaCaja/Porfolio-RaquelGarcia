@@ -5,7 +5,7 @@
   position: fixed;
   width: 100%;
   font-family: $font-main;
-  padding: 10px;
+  padding: 8px 12px;
   background-color: $color-cuaternary;
   z-index: 9999999;
 
@@ -13,12 +13,11 @@
     justify-content: space-between;
   }
   &__porfolio {
-    color: lightblue;
+    color: $color-main;
   }
   &__por,
   &__porfolio {
     font-size: $header-mobile;
-
     @media all and (min-width: 768px) {
       font-size: $header-tablet-desktop;
     }
@@ -33,53 +32,10 @@
     display: flex;
     justify-content: space-evenly;
   }
-  &__menu {
-    cursor: pointer;
-    font-size: 20px;
-    display: none;
-    color: black;
-    transition: 0.5s;
-    padding-right: 20px;
-    // &:hover {
-    //   transition: 0.5s;
-    //   color: orange;
-    // }
-  }
-  &__icon {
-    border-radius: 50%;
-    margin: 0 5px;
-    padding: 5px 8px;
-    transition: 0.5s;
-    @media all and (min-width: 768px) {
-      margin: 0 15px;
-      padding: 14px 10px 8px;
-    }
-    @media all and (min-width: 1200px) {
-      margin: 0 35px;
-      padding: 20px 12px 13px;
-    }
-    &:hover {
-      transition: 0.5s;
-    }
-  }
-  &__social {
-    color: black;
-    transition: 0.5s;
-    &:hover {
-      color: lightblue;
-    }
-  }
 }
 
 .header__nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: lightblue;
   display: flex;
-  // transition: all 1s ease;
-  padding: 18px;
   @media all and (min-width: 768px) {
     justify-content: space-between;
   }
@@ -89,20 +45,20 @@
   color: black;
   text-decoration: none;
   font-size: $header-mobile;
-  padding: 8px;
-
+  padding: 5px;
   &:hover {
-    color: $color-cuaternary;
+    color: $color-main;
   }
   @media all and (min-width: 768px) {
     font-size: $header-tablet-desktop;
+    padding: 12px;
   }
 }
-.header__menuShow {
-  display: block;
-  z-index: 999;
-}
+// .header__menuShow {
+//   display: block;
+//   z-index: 999;
+// }
 
-.hidden {
-  display: none;
-}
+// .hidden {
+//   display: none;
+// }

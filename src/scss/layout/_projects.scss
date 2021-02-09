@@ -20,11 +20,11 @@
       background-color: black;
     }
     &::before {
-      left: 112px;
+      left: 115px;
       top: 27px;
     }
     &::after {
-      right: 112px;
+      right: 115px;
       top: 27px;
     }
     @media all and (min-width: 768px) {
@@ -77,9 +77,12 @@
     margin: 10px 10px;
     padding: 10px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media all and(min-width:1200px) {
-      padding: 10px 35px;
+      padding: 10px 20px;
     }
   }
 
@@ -97,16 +100,18 @@
   }
 
   &--project__img {
+    text-align: center;
     height: 150px;
     width: 200px;
+    padding-top: 5px;
     cursor: pointer;
     @media all and(min-width:768px) {
       height: 200px;
       width: 280px;
     }
     @media all and(min-width:1200px) {
-      height: 200px;
-      width: 280px;
+      height: 150px;
+      width: 200px;
     }
   }
   &--hidden {
