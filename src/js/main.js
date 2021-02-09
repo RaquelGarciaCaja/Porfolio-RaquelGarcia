@@ -4,10 +4,10 @@ const nav = document.querySelector(".header__nav");
 const details = document.querySelector(".projectDetails");
 const close = document.querySelector(".projectDetails__close");
 
-const clickMenu = () => {
-  nav.classList.toggle("hidden");
-};
-
+if (window.)
+  const clickMenu = () => {
+    nav.classList.toggle("hidden");
+  };
 const closeDetails = () => {
   details.classList.remove("active");
 };

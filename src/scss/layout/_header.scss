@@ -7,7 +7,8 @@
   font-family: $font-main;
   padding: 10px;
   background-color: $color-cuaternary;
-  z-index: 999;
+  z-index: 9999999;
+
   @media all and (min-width: 768px) {
     justify-content: space-between;
   }
@@ -17,6 +18,7 @@
   &__por,
   &__porfolio {
     font-size: $header-mobile;
+
     @media all and (min-width: 768px) {
       font-size: $header-tablet-desktop;
     }

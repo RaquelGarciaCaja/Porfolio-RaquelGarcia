@@ -7,7 +7,7 @@
     padding: 10px;
     font-family: $font-main;
     text-align: center;
-    font-size: $header-mobile;
+    font-size: 22px;
     position: relative;
 
     &::after,
@@ -15,25 +15,33 @@
       content: "";
       position: absolute;
       height: 2px;
-      width: 25px;
-      background-color: black;
+      width: 18px;
       top: 21px;
+      background-color: black;
     }
     &::before {
-      left: 80px;
+      left: 108px;
+      top: 27px;
     }
     &::after {
-      right: 80px;
+      right: 108px;
+      top: 27px;
     }
     @media all and (min-width: 768px) {
-      font-size: $header-tablet-desktop;
+      font-size: 30px;
+      &::after,
       &::before {
-        left: 105px;
-        top: 25px;
+        height: 2px;
+        width: 24px;
+        top: 21px;
+      }
+      &::before {
+        left: 140px;
+        top: 32px;
       }
       &::after {
-        right: 105px;
-        top: 25px;
+        right: 142px;
+        top: 32px;
       }
     }
     @media all and (min-width: 1200px) {
@@ -72,12 +80,12 @@
   &__img {
     height: 250px;
     border-radius: 44px;
+    padding-right: 10px;
     @media all and(min-width:768px) {
       height: 350px;
     }
   }
   &__text {
-    // margin-left: 50px;
     opacity: 0.93;
     border-radius: 44px;
     text-align: center;
@@ -86,13 +94,13 @@
     padding: 7px;
     font-family: $font-main;
     text-align: center;
-    font-size: 12px;
+    font-size: 13px;
 
     @media all and (min-width: 768px) {
       font-size: 18px;
     }
     @media all and (min-width: 1200px) {
-      font-size: 20px;
+      font-size: 19px;
     }
   }
   &__cv {

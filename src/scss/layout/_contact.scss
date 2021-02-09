@@ -1,5 +1,4 @@
 .contact {
-  background-image: url("../images/playa.jpg");
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -7,31 +6,39 @@
   justify-content: center;
   align-items: center;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    opacity: 0.75;
+    height: 100%;
+    background-image: url("../images/playa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
   &--text {
     display: flex;
     justify-self: center;
     font-family: $font-main;
-    font-size: $main-mobile;
-    color: white;
-    // text-shadow: 0.1em 0.1em 0.2em white;
+    font-size: 25px;
+    color: black;
+    position: relative;
     @media all and (min-width: 768px) {
-      font-size: $main-tabet;
+      font-size: 35px;
     }
     @media all and (min-width: 1200px) {
-      font-size: $main-desktop;
+      font-size: 55px;
     }
   }
   &--containerText {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: black 2px solid;
-    background-color: black;
     border-radius: 22px;
     opacity: 0.8;
-  }
-  &--containerText,
-  &--containerSocial {
     text-align: center;
     padding: 15px;
     @media all and (min-width: 768px) {
@@ -39,35 +46,6 @@
     }
     @media all and (min-width: 1200px) {
       padding: 20px;
-    }
-  }
-
-  &--icon {
-    margin: 0 5px;
-    padding: 5px 8px;
-
-    @media all and (min-width: 768px) {
-      margin: 0 15px;
-      padding: 14px 10px 8px;
-    }
-    @media all and (min-width: 1200px) {
-      margin: 0 35px;
-      padding: 20px 12px 13px;
-    }
-  }
-  &--social {
-    font-size: 20px;
-    color: black;
-    transition: 0.5s;
-    &:hover {
-      transition: 1s;
-      color: $color-main;
-    }
-    @media all and (min-width: 768px) {
-      font-size: 25px;
-    }
-    @media all and (min-width: 1200px) {
-      font-size: 30px;
     }
   }
 }
