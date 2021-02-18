@@ -67,7 +67,7 @@
       &::after,
       &::before {
         height: 2px;
-        width: 24px;
+        width: 20px;
         top: 32px;
       }
       &::before {
@@ -81,12 +81,12 @@
     }
     @media all and (min-width: 1200px) {
       &::before {
-        left: 148px;
+        left: 138px;
         top: 19px;
         height: 3px;
       }
       &::after {
-        right: 148px;
+        right: 138px;
         top: 19px;
         height: 3px;
       }

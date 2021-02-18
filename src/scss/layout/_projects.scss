@@ -28,32 +28,32 @@
       top: 27px;
     }
     @media all and (min-width: 768px) {
-      font-size: 30px;
+      font-size: 20px;
       &::after,
       &::before {
         height: 2px;
-        width: 24px;
+        width: 20px;
         top: 21px;
       }
       &::before {
-        left: 149px;
-        top: 33px;
+        left: 105px;
+        top: 25px;
       }
       &::after {
-        right: 151px;
-        top: 33px;
+        right: 105px;
+        top: 25px;
       }
     }
     @media all and (min-width: 1200px) {
-      font-size: 35px;
+      font-size: 25px;
       &::before {
-        left: 175px;
-        top: 37px;
+        left: 130px;
+        top: 27px;
         height: 3px;
       }
       &::after {
-        right: 175px;
-        top: 37px;
+        right: 130px;
+        top: 27px;
         height: 3px;
       }
     }
@@ -165,7 +165,40 @@
     text-decoration: none;
   }
   &--iconUp {
-    font-size: 20px;
     color: $color-cuaternary;
+    font-size: 20px;
+
+    @media all and (min-width: 768px) {
+      font-size: 25px;
+    }
+  }
+  &__more {
+    cursor: pointer;
+    font-family: $font-main;
+    font-size: $header-mobile;
+    color: black;
+    margin-bottom: 20px;
+    text-decoration: none;
+    border: 2px solid $color-cuaternary;
+    background-color: $color-cuaternary;
+    border-radius: 15px;
+    @media all and (min-width: 768px) {
+      font-size: 18px;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 20px;
+    }
+    &:hover {
+      background-color: white;
+    }
+  }
+  &__icon {
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+  }
+  &__social {
+    padding-right: 10px;
   }
 }
