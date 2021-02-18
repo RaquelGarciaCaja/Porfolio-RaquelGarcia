@@ -3,7 +3,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 
   &::before {
@@ -47,5 +47,35 @@
     @media all and (min-width: 1200px) {
       padding: 20px;
     }
+  }
+  &--arrow {
+    color: black;
+    cursor: pointer;
+    position: relative;
+    font-size: 25px;
+    animation-name: arrow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    // transform: translate(0, -50%);
+    @media all and (min-width: 768px) {
+      font-size: 35px;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 40px;
+    }
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translate(0, 80px);
+  }
+
+  50% {
+    transform: translate(0, 100px);
+  }
+
+  100% {
+    transform: translate(0, 80px);
   }
 }

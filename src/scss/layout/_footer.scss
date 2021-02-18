@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   background-color: $color-cuaternary;
-  padding: 15px;
+
+  padding: 20px 20px 40px 20px;
 
   &__create {
     font-family: $font-main;
@@ -43,6 +44,53 @@
   &__talk {
     font-family: $font-main;
     padding-bottom: 15px;
+    position: relative;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 18px;
+      top: 21px;
+      background-color: black;
+    }
+    &::before {
+      left: 140px;
+      top: 18px;
+    }
+    &::after {
+      right: 140px;
+      top: 18px;
+    }
+    @media all and (min-width: 768px) {
+      &::after,
+      &::before {
+        height: 2px;
+        width: 24px;
+        top: 32px;
+      }
+      &::before {
+        left: 140px;
+        top: 18px;
+      }
+      &::after {
+        right: 142px;
+        top: 18px;
+      }
+    }
+    @media all and (min-width: 1200px) {
+      &::before {
+        left: 148px;
+        top: 19px;
+        height: 3px;
+      }
+      &::after {
+        right: 148px;
+        top: 19px;
+        height: 3px;
+      }
+    }
   }
   &__name {
     display: flex;
