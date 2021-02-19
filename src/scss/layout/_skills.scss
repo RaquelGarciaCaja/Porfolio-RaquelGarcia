@@ -1,6 +1,10 @@
 .skills {
-  background-color: $color-main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
+  background-color: $color-main;
+
   &__title {
     padding: 10px;
     font-family: $font-main;
@@ -18,41 +22,38 @@
       background-color: black;
     }
     &::before {
-      left: 55px;
-      top: 27px;
+      left: 138px;
+      top: 26px;
     }
     &::after {
-      right: 55px;
-      top: 27px;
+      right: 138px;
+      top: 26px;
     }
     @media all and (min-width: 768px) {
       font-size: 20px;
       &::after,
       &::before {
-        height: 2px;
         width: 20px;
         top: 21px;
       }
       &::before {
-        left: 285px;
-        top: 25px;
+        left: 127px;
+        top: 24px;
       }
       &::after {
-        right: 285px;
-        top: 25px;
+        right: 127px;
+        top: 24px;
       }
     }
     @media all and (min-width: 1200px) {
       font-size: 25px;
       &::before {
-        left: 480px;
+        left: 151px;
         top: 27px;
-        height: 3px;
       }
       &::after {
-        right: 480px;
+        right: 151px;
         top: 27px;
-        height: 3px;
       }
     }
   }
@@ -64,26 +65,40 @@
     justify-items: center;
     @media all and(min-width:768px) {
       grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    @media all and(min-width:1200px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 150px;
     }
   }
   &__list {
+    min-width: 200px;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $color-cuaternary;
-    border-radius: 20px;
-    border: 2px solid $color-cuaternary;
-    padding: 10px 15px;
-    margin: 10px;
+    cursor: pointer;
+
     &:hover {
       background-color: white;
     }
     &--mainTitle {
       text-transform: uppercase;
-      padding: 5px;
+      padding: 5px 5px 2px;
+      border-bottom: 1px solid black;
     }
     &--item {
       list-style: none;
+      padding-top: 8px;
     }
   }
+}
+.fab {
+  padding-left: 5px;
+  font-size: 15px;
 }
