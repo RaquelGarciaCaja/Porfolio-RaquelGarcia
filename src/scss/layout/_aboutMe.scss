@@ -79,11 +79,11 @@
     text-align: center;
   }
   &__img {
-    height: 250px;
+    height: 200px;
     border-radius: 44px;
     padding-right: 10px;
     @media all and(min-width:768px) {
-      height: 350px;
+      height: 300px;
     }
   }
   &__text {
@@ -96,13 +96,6 @@
     font-family: $font-main;
     text-align: center;
     font-size: 15px;
-
-    @media all and (min-width: 768px) {
-      font-size: 18px;
-    }
-    @media all and (min-width: 1200px) {
-      font-size: 19px;
-    }
   }
   &__cv {
     cursor: pointer;
