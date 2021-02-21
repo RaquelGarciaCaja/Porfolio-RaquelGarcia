@@ -2,6 +2,9 @@
 const nav = document.querySelector(".header__nav");
 const details = document.querySelector(".projectDetails");
 const close = document.querySelector(".projectDetails__close");
+const iconMenu = document.querySelector(".js-iconMenu");
+const menu = document.querySelector(".js-menu");
+const iconClose = document.querySelector(".js-iconClose");
 
 const closeDetails = () => {
   details.classList.remove("active");
@@ -22,4 +25,18 @@ const detailsImg = document.querySelectorAll(".project--project__img").forEach((
   });
 });
 
+function openMenu() {
+  menu.classList.toggle("hidden");
+  iconClose.classList.toggle("hidden");
+  iconMenu.classList.toggle("hidden");
+}
+
+function closeMenu() {
+  menu.classList.toggle("hidden");
+  iconClose.classList.toggle("hidden");
+  iconMenu.classList.toggle("hidden");
+}
+
 close.addEventListener("click", closeDetails);
+iconMenu.addEventListener("click", openMenu);
+iconClose.addEventListener("click", closeMenu);

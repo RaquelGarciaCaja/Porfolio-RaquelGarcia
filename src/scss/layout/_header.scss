@@ -29,8 +29,33 @@
 
   &__ul {
     list-style: none;
+    // display: flex;
+    // justify-content: space-evenly;
+    position: relative;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: $color-cuaternary;
+    height: 100vh;
+    padding: 20px;
+  }
+
+  &__menu {
+    display: flex;
+    @media all and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__iconMenu,
+  &__iconClose {
+    cursor: pointer;
+  }
+
+  &__iconClose {
+    position: absolute;
+    color: white;
+    right: 19px;
+    top: 14px;
   }
 }
 
@@ -38,6 +63,54 @@
   display: flex;
   @media all and (min-width: 768px) {
     justify-content: space-between;
+  }
+}
+
+//MENU MOVIL
+.header {
+  &__ulMovil {
+    list-style: none;
+    // display: flex;
+    // justify-content: space-evenly;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-cuaternary;
+    height: 100vh;
+    padding: 40px;
+  }
+  &__navMovil {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+  }
+
+  &__linksMovil {
+    color: black;
+    text-decoration: none;
+    font-size: $header-mobile;
+    padding: 10px;
+    &:hover {
+      color: $color-main;
+    }
+    @media all and (min-width: 768px) {
+      font-size: $header-tablet-desktop;
+      padding: 12px;
+    }
+  }
+
+  &__liMovil {
+    padding: 15px 0;
+    border-bottom: 1px solid $color-main;
   }
 }
 
@@ -54,3 +127,13 @@
     padding: 12px;
   }
 }
+
+.hidden {
+  display: none;
+}
+
+// tenerlo en cuenta
+// .header__iconClose {
+//   position: absolute;
+//   z-index: 99999999999999;
+// }
