@@ -61,6 +61,7 @@
   &--list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
     justify-items: center;
     padding: 0 10px 15px;
 

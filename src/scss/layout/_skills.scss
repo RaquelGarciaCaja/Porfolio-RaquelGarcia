@@ -60,22 +60,44 @@
 
   &__containerList {
     font-family: $font-main;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     @media all and(min-width:768px) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
-    @media all and(min-width:1200px) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 150px;
-    }
+    // @media all and(min-width:1200px) {
+    //   grid-template-columns: repeat(3, 1fr);
+    //   gap: 50px;
+    // }
+
+    // display: grid;
+    // grid-template-columns: repeat(1, 1fr);
+    // justify-items: center;
+    // @media all and(min-width:768px) {
+    //   grid-template-columns: repeat(2, 1fr);
+    //   gap: 50px;
+    // }
+    // @media all and(min-width:1200px) {
+    //   grid-template-columns: repeat(3, 1fr);
+    //   gap: 50px;
+    // }
+
+    // @media all and(min-width:768px) {
+    //   grid-template-columns: repeat(3, 1fr);
+    //   gap: 30px;
+    // }
+    // @media all and(min-width:1200px) {
+    //   grid-template-columns: repeat(3, 1fr);
+    //   gap: 150px;
+    // }
   }
   &__list {
-    width: 200px;
+    width: 250px;
     border: 2px solid black;
-    margin: 10px;
+    margin: 15px;
     padding: 10px 15px;
     border-radius: 20px;
     display: flex;
@@ -83,6 +105,9 @@
     align-items: center;
     background-color: $color-cuaternary;
 
+    @media all and(min-width:1200px) {
+      margin: 50px;
+    }
     &--mainTitle {
       text-transform: uppercase;
       padding: 5px 5px 2px;
