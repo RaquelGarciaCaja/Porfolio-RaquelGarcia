@@ -37,6 +37,19 @@ function closeMenu() {
   iconMenu.classList.toggle("hidden");
 }
 
+function closeMenuClickListaLink() {
+  menu.classList.toggle("hidden");
+  iconMenu.classList.toggle("hidden");
+  iconClose.classList.toggle("hidden");
+}
+
+function listClick() {
+  const listLink = document.querySelectorAll(".js-liMovil");
+  for (const eachListLink of listLink) {
+    eachListLink.addEventListener("click", closeMenuClickListaLink);
+  }
+}
+listClick();
 close.addEventListener("click", closeDetails);
 iconMenu.addEventListener("click", openMenu);
 iconClose.addEventListener("click", closeMenu);

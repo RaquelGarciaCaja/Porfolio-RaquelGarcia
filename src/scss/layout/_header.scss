@@ -29,8 +29,6 @@
 
   &__ul {
     list-style: none;
-    // display: flex;
-    // justify-content: space-evenly;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -45,17 +43,20 @@
       display: none;
     }
   }
-
-  &__iconMenu,
   &__iconClose {
     cursor: pointer;
-  }
-
-  &__iconClose {
     position: absolute;
     color: white;
-    right: 19px;
-    top: 14px;
+    font-size: 20px;
+    right: 17px;
+    top: 18px;
+    @media all and (min-width: 768px) {
+      top: 20px;
+    }
+  }
+  &__iconMenu {
+    cursor: pointer;
+    font-size: 20px;
   }
 }
 
@@ -70,8 +71,6 @@
 .header {
   &__ulMovil {
     list-style: none;
-    // display: flex;
-    // justify-content: space-evenly;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -90,8 +89,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
+    // background: rgba(0, 0, 0, 0.9);
   }
 
   &__linksMovil {

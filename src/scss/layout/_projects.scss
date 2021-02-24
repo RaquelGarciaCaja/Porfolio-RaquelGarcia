@@ -98,16 +98,15 @@
   &--project__img {
     text-align: center;
     height: 150px;
-    width: 200px;
+    width: 250px;
     padding-top: 5px;
     cursor: pointer;
-    @media all and(min-width:768px) {
-      height: 150px;
-      width: 200px;
-    }
-    @media all and(min-width:1200px) {
-      height: 150px;
-      width: 200px;
+    transform: scale(1);
+    transition: 1s;
+
+    &:hover {
+      transition: 1s;
+      transform: scale(1.019);
     }
   }
 
