@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   background-color: $color-cuaternary;
-  padding: 20px 20px 40px 20px;
+  padding: 20px 20px 10px 20px;
 
   &__create {
     font-family: $font-main;
@@ -88,7 +88,16 @@
       }
     }
   }
+  &__subTalk {
+    display: flex;
+    font-family: $font-main;
+    text-align: center;
+    @media all and (min-width: 768px) {
+      width: 500px;
+    }
+  }
   &__name {
+    padding: 30px;
     display: flex;
   }
   &__container {

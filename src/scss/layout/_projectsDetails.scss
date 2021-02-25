@@ -7,17 +7,17 @@
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.8);
-
   justify-content: center;
   flex-direction: column;
   padding: 20px;
   display: none;
+  z-index: 999999;
 
   @media all and(min-width:768px) {
     padding: 100px;
   }
   @media all and(min-width:1200px) {
-    padding-top: 190px;
+    top: 30px;
   }
 
   &.active {
@@ -28,7 +28,6 @@
   &__description,
   &__tolls {
     font-family: $font-main;
-
     display: block;
     color: black;
     border-radius: 10px;
@@ -45,8 +44,8 @@
     justify-content: center;
   }
   &__img {
-    height: 100px;
     display: block;
+    height: 100px;
     padding: 10px;
 
     @media all and(min-width:768px) {
