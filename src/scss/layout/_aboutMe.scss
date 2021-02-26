@@ -5,10 +5,9 @@
   padding: 20px;
 
   &__title {
-    padding: 10px;
+    font-size: 24px;
     font-family: $font-main;
-    text-align: center;
-    font-size: 22px;
+    padding-bottom: 15px;
     position: relative;
 
     &::after,
@@ -21,41 +20,36 @@
       background-color: black;
     }
     &::before {
-      left: 108px;
-      top: 27px;
+      left: 103px;
+      top: 18px;
     }
     &::after {
-      right: 108px;
-      top: 27px;
+      right: 104px;
+      top: 18px;
     }
     @media all and (min-width: 768px) {
-      font-size: 20px;
       &::after,
       &::before {
-        height: 2px;
         width: 20px;
-        top: 21px;
+        top: 32px;
       }
       &::before {
-        left: 100px;
-        top: 25px;
+        left: 103px;
+        top: 18px;
       }
       &::after {
-        right: 100px;
-        top: 25px;
+        right: 104px;
+        top: 18px;
       }
     }
     @media all and (min-width: 1200px) {
-      font-size: 25px;
       &::before {
-        left: 125px;
-        top: 27px;
-        height: 3px;
+        left: 103px;
+        top: 19px;
       }
       &::after {
-        right: 125px;
-        top: 27px;
-        height: 3px;
+        right: 104px;
+        top: 19px;
       }
     }
   }

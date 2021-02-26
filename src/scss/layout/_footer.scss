@@ -40,7 +40,8 @@
       transition: 0.7s;
     }
   }
-  &__talk {
+  &__title {
+    font-size: 24px;
     font-family: $font-main;
     padding-bottom: 15px;
     position: relative;
@@ -88,7 +89,7 @@
       }
     }
   }
-  &__subTalk {
+  &__subTitle {
     display: flex;
     font-family: $font-main;
     text-align: center;
@@ -107,7 +108,7 @@
     flex-direction: column;
     padding-bottom: 10px;
   }
-  &__subTitle {
+  &__subSocial {
     display: none;
     color: black;
     @media all and (min-width: 768px) {

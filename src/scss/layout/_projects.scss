@@ -6,10 +6,9 @@
   padding: 20px;
 
   &--title {
-    padding: 10px;
+    font-size: 24px;
     font-family: $font-main;
-    text-align: center;
-    font-size: 22px;
+    padding-bottom: 15px;
     position: relative;
 
     &::after,
@@ -22,38 +21,36 @@
       background-color: black;
     }
     &::before {
-      left: 115px;
-      top: 27px;
+      left: 110px;
+      top: 18px;
     }
     &::after {
-      right: 115px;
-      top: 27px;
+      right: 111px;
+      top: 18px;
     }
     @media all and (min-width: 768px) {
-      font-size: 20px;
       &::after,
       &::before {
         width: 20px;
-        top: 21px;
+        top: 32px;
       }
       &::before {
-        left: 105px;
-        top: 25px;
+        left: 110px;
+        top: 18px;
       }
       &::after {
-        right: 105px;
-        top: 25px;
+        right: 111px;
+        top: 18px;
       }
     }
     @media all and (min-width: 1200px) {
-      font-size: 25px;
       &::before {
-        left: 130px;
-        top: 27px;
+        left: 110px;
+        top: 19px;
       }
       &::after {
-        right: 130px;
-        top: 27px;
+        right: 111px;
+        top: 19px;
       }
     }
   }

@@ -6,10 +6,9 @@
   background-color: $color-cuaternary;
 
   &__title {
-    padding: 10px;
+    font-size: 24px;
     font-family: $font-main;
-    text-align: center;
-    font-size: 22px;
+    padding-bottom: 15px;
     position: relative;
 
     &::after,
@@ -22,42 +21,39 @@
       background-color: black;
     }
     &::before {
-      left: 138px;
-      top: 26px;
+      left: 133px;
+      top: 18px;
     }
     &::after {
-      right: 138px;
-      top: 26px;
+      right: 131px;
+      top: 18px;
     }
     @media all and (min-width: 768px) {
-      font-size: 20px;
       &::after,
       &::before {
         width: 20px;
-        top: 21px;
+        top: 32px;
       }
       &::before {
-        left: 127px;
-        top: 24px;
+        left: 133px;
+        top: 18px;
       }
       &::after {
-        right: 127px;
-        top: 24px;
+        right: 131px;
+        top: 18px;
       }
     }
     @media all and (min-width: 1200px) {
-      font-size: 25px;
       &::before {
-        left: 151px;
-        top: 27px;
+        left: 133px;
+        top: 19px;
       }
       &::after {
-        right: 151px;
-        top: 27px;
+        right: 134px;
+        top: 19px;
       }
     }
   }
-
   &__containerList {
     font-family: $font-main;
     display: flex;
