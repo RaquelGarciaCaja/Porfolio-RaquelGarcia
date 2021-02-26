@@ -9,14 +9,17 @@
   background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 0 20px;
   display: none;
+  justify-content: center;
+  align-items: center;
   z-index: 999999;
 
   @media all and(min-width:768px) {
-    padding: 100px;
+    padding: 0 150px;
   }
   @media all and(min-width:1200px) {
+    padding: 0 400px;
     top: 30px;
   }
 
@@ -30,13 +33,12 @@
     font-family: $font-main;
     display: block;
     color: black;
-    border-radius: 10px;
-    padding: 8px;
-    margin-top: 5px;
+    padding: 15px;
+    // margin: 10px;
     text-align: center;
-    @media all and(min-width:768px) {
-      text-align: center;
-    }
+    // @media all and(min-width:768px) {
+    //   text-align: center;
+    // }
   }
 
   &__containerImg {
@@ -45,26 +47,27 @@
   }
   &__img {
     display: block;
-    height: 100px;
+    height: 120px;
     padding: 10px;
-
-    @media all and(min-width:768px) {
-      height: 200px;
-    }
-    @media all and(min-width:1200px) {
-      height: 300px;
-    }
   }
   &__container {
     position: relative;
     background-color: white;
-    border-radius: 22px;
+    margin: 0 15px 0 10px;
+    padding: -30px 30px;
+    // height: 380px;
+    // width: 400px;
+    // border-radius: 22px;
+    // @media all and(min-width:768px) {
+    //   height: 380px;
+    //   width: 400px;
+    // }
   }
   &__close {
     padding-right: 5px;
     position: absolute;
-    right: -15px;
-    top: -15px;
+    right: -23px;
+    top: -18px;
     font-size: 20px;
     color: white;
     cursor: pointer;
