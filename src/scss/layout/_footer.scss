@@ -55,11 +55,11 @@
       background-color: black;
     }
     &::before {
-      left: 135px;
+      left: 100px;
       top: 18px;
     }
     &::after {
-      right: 135px;
+      right: 101px;
       top: 18px;
     }
     @media all and (min-width: 768px) {
@@ -69,21 +69,21 @@
         top: 32px;
       }
       &::before {
-        left: 135px;
+        left: 100px;
         top: 18px;
       }
       &::after {
-        right: 135px;
+        right: 101px;
         top: 18px;
       }
     }
     @media all and (min-width: 1200px) {
       &::before {
-        left: 140px;
+        left: 100px;
         top: 19px;
       }
       &::after {
-        right: 140px;
+        right: 101px;
         top: 19px;
       }
     }
