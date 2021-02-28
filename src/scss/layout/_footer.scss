@@ -10,6 +10,9 @@
     font-size: 12px;
     padding: 20px 0 8px 0;
   }
+  &__heart {
+    color: red;
+  }
   &__icon {
     cursor: pointer;
     display: flex;
@@ -118,8 +121,4 @@
       margin: 0 15px;
     }
   }
-}
-
-.blue {
-  color: $color-main;
 }

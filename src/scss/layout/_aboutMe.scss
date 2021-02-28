@@ -5,9 +5,10 @@
   padding: 20px;
 
   &__title {
-    font-size: 24px;
+    padding: 10px;
     font-family: $font-main;
-    padding-bottom: 15px;
+    text-align: center;
+    font-size: 22px;
     position: relative;
 
     &::after,
@@ -20,36 +21,41 @@
       background-color: black;
     }
     &::before {
-      left: 103px;
-      top: 18px;
+      left: 108px;
+      top: 27px;
     }
     &::after {
-      right: 104px;
-      top: 18px;
+      right: 108px;
+      top: 27px;
     }
     @media all and (min-width: 768px) {
+      font-size: 20px;
       &::after,
       &::before {
+        height: 2px;
         width: 20px;
-        top: 32px;
+        top: 21px;
       }
       &::before {
-        left: 103px;
-        top: 18px;
+        left: 100px;
+        top: 25px;
       }
       &::after {
-        right: 104px;
-        top: 18px;
+        right: 100px;
+        top: 25px;
       }
     }
     @media all and (min-width: 1200px) {
+      font-size: 25px;
       &::before {
-        left: 103px;
-        top: 19px;
+        left: 125px;
+        top: 27px;
+        height: 3px;
       }
       &::after {
-        right: 104px;
-        top: 19px;
+        right: 125px;
+        top: 27px;
+        height: 3px;
       }
     }
   }
@@ -74,7 +80,7 @@
   }
   &__img {
     height: 200px;
-    // border-radius: 44px;
+    border-radius: 44px;
     padding-right: 10px;
     @media all and(min-width:768px) {
       height: 300px;
